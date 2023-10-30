@@ -129,3 +129,29 @@ CREATE TABLE IF NOT EXISTS `manutencao_espaco` (
   CONSTRAINT `fk_limpeza_espacos_espacos_hotel1`
     FOREIGN KEY (`espacos_hotel_id_espacos`)
     REFERENCES `espacos_hotel` (`id_espacos`));
+    
+    
+    /*/Inserts tabela reserva de espacos/*/
+    /*/20 (vinte) inserts por tabela/*/
+    /*/ids foram criados automaticos mas vão ser trocados para o numero dos quartos /*/
+    
+insert into reservas_espacos (id, first_name, last_name, email) values (1, 'Aksel', 'Casburn', 'acasburn0@slideshare.net');
+insert into reservas_espacos (id, first_name, last_name, email) values (2, 'Harlene', 'Elmhurst', 'helmhurst1@nyu.edu');
+insert into reservas_espacos (id, first_name, last_name, email) values (3, 'Wrennie', 'Lidgate', 'wlidgate2@stumbleupon.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (4, 'Mariana', 'Tomes', 'mtomes3@storify.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (5, 'Bennie', 'Boakes', 'bboakes4@opensource.org');
+insert into reservas_espacos (id, first_name, last_name, email) values (6, 'Kevyn', 'Hayton', 'khayton5@umn.edu');
+insert into reservas_espacos (id, first_name, last_name, email) values (7, 'Ricca', 'Thoday', 'rthoday6@feedburner.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (8, 'Rochette', 'Pavlenkov', 'rpavlenkov7@abc.net.au');
+insert into reservas_espacos (id, first_name, last_name, email) values (9, 'Madel', 'Dunmuir', 'mdunmuir8@sourceforge.net');
+insert into reservas_espacos (id, first_name, last_name, email) values (10, 'Vaughn', 'Kibby', 'vkibby9@taobao.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (11, 'Corrine', 'Janczyk', 'cjanczyka@linkedin.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (12, 'Jaine', 'Mainland', 'jmainlandb@163.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (13, 'Sasha', 'Tivolier', 'stivolierc@reverbnation.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (14, 'Celisse', 'Sparks', 'csparksd@pcworld.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (15, 'Vittorio', 'Jirick', 'vjiricke@is.gd');
+insert into reservas_espacos (id, first_name, last_name, email) values (16, 'Kara', 'Chatto', 'kchattof@mysql.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (17, 'Timmy', 'Sorley', 'tsorleyg@pcworld.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (18, 'Anissa', 'Woodier', 'awoodierh@edublogs.org');
+insert into reservas_espacos (id, first_name, last_name, email) values (19, 'Gayle', 'Nystrom', 'gnystromi@tumblr.com');
+insert into reservas_espacos (id, first_name, last_name, email) values (20, 'Anett', 'Sitwell', 'asitwellj@youtu.be');
