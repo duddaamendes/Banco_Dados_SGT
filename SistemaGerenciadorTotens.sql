@@ -10,7 +10,7 @@ USE `SGT` ;
 -- Table `usuarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id_usuarios` INT(7) NOT NULL,
+  `id_usuarios` INT(7) NOT NULL AUTO_INCREMENT,
   `tipo_usuario` CHAR(1) NOT NULL,
   `login` VARCHAR(45) NOT NULL,
   `senha` VARCHAR(45) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 -- Table `espacos_hotel`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `espacos_hotel` (
-  `id_espacos` INT(7) NOT NULL,
+  `id_espacos` INT(7) NOT NULL AUTO_INCREMENT,
   `nome_espaco` VARCHAR(100) NOT NULL,
   `dia_semana_abertura` DATE NOT NULL,
   `dia_semana_fechamento` DATE NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `gerenciamento_acesso` (
 -- Table `funcionarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `funcionarios` (
-  `id_funcionarios` INT(7) NOT NULL,
+  `id_funcionarios` INT(7) NOT NULL AUTO_INCREMENT,
   `primeiro_nome` VARCHAR(100) NOT NULL,
   `sobrenome` VARCHAR(100) NOT NULL,
   `cpf` VARCHAR(100) NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `funcionarios` (
 -- Table `reservas_espacos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reservas_espacos` (
-  `id_reservas` INT(7) NOT NULL,
+  `id_reservas` INT(7) NOT NULL AUTO_INCREMENT,
   `dia_horario` DATETIME NOT NULL,
   `clientes_cpf_clientes` INT(11) NOT NULL,
   `espacos_hotel_id_espacos` INT(11) NOT NULL,
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `hospedagens` (
 -- Table `manutencao_espaco`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `manutencao_espaco` (
-  `idlimpeza_espacos` INT NOT NULL,
+  `idlimpeza_espacos` INT NOT NULL AUTO_INCREMENT,
   `dia` DATE NOT NULL,
   `hora_inicio` TIME NOT NULL,
   `hora_final` TIME NOT NULL,
