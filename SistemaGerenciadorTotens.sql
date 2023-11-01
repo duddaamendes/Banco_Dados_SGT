@@ -113,10 +113,17 @@ CREATE TABLE IF NOT EXISTS `manutencao_espaco` (
     /*/Inserts tabela reserva de espacos/*/
     /*/20 (vinte) inserts por tabela/*/
     /*/ids foram criados automaticos mas vão ser trocados para o numero dos quartos /*/
-    
+
+-- Descs
+DESC usuarios;
+DESC clientes;
+DESC espacos_hotel;
+DESC funcionarios;
+DESC reservas_espacos;
+DESC hospedagens;
+DESC manutencao_espaco;
 
 -- INSERTS CLIENTES ---
-USE SGT;
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('78080932445', 'Putnam', 'Nowland', '2013-08-01', 'pnowland0@tripadvisor.com', '(36) 72424-5142', 55652930, 15, 1);
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('45345437765', 'Annalise', 'Mableson', '2009-05-30', 'amableson1@e-recht24.de', '(51) 29504-5076', 72353783, 558, 2);
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('99859850445', 'Winnie', 'Baribal', '2016-05-26', 'wbaribal2@marketwatch.com', '(20) 16574-5955', 47773696, 915, 3);
@@ -143,7 +150,6 @@ insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimen
 
 
 -- INSERTS HOSPEDAGENS -- 
-USE SGT;
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16', '2023-12-14', 1);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10', '2024-01-05', 2);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21', '2023-12-26', 3);
@@ -166,7 +172,6 @@ insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (19, 
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, '2023-11-09', '2023-12-05', 20);
 
 -- INSERTS USUARIO ---
-USE `SGT` ;
 insert into usuarios (login, senha) values ( 'gbydaway0', 's5lRGZg');
 insert into usuarios (login, senha) values ('gmacpaike1', 'a3aAJ2p');
 insert into usuarios (login, senha) values ('lormond2', 'g1AWE6R');
@@ -188,6 +193,45 @@ insert into usuarios (login, senha) values ('gconrathh', 'f70xt6l');
 insert into usuarios (login, senha) values ('mferdinandi', 'g9Ocf7K');
 insert into usuarios (login, senha) values ('uelementj', 'c8zZ05a');
 
+
+-- UPDATE clientes
+UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
+UPDATE clientes SET sobrenome="Mendes", telefone="(47)98810-8919" WHERE id_cliente=2;
+UPDATE clientes SET primeiro_nome="Maria", num_casa=23 WHERE id_cliente=3;
+UPDATE clientes SET cep=09856743, num_casa=345 WHERE id_cliente=4;
+UPDATE clientes SET primeiro_nome="Duda", sobrenome = "Mendes" WHERE id_cliente=5;
+UPDATE clientes SET telefone="(78) 98831-7346", email="mariamendes@gmail.com" WHERE id_cliente=6;
+UPDATE clientes SET primeiro_nome="Eusira", data_nascimento="1997-01-27" WHERE id_cliente=7;
+UPDATE clientes SET num_identificacao="CS265436", primeiro_nome="Carlos" WHERE id_cliente=8;
+UPDATE clientes SET sobrenome="Silva", num_casa=78 WHERE id_cliente=9;
+UPDATE clientes SET num_identificacao="09156798787", data_nascimento="2003-08-20" WHERE id_cliente=10;
+
+-- UPDATE hospedagens
+UPDATE hospedagens SET checkin="2023-08-20", checkout="2023-12-20", id_cliente=12 WHERE num_quarto=11;
+UPDATE hospedagens SET id_cliente=3 WHERE num_quarto=12;
+UPDATE hospedagens SET checkout="2023-11-02" WHERE num_quarto=13;
+UPDATE hospedagens SET checkin="2024-10-20" WHERE num_quarto=14;
+UPDATE hospedagens SET checkin="2022-11-22" WHERE num_quarto=15;
+UPDATE hospedagens SET id_cliente=17 WHERE num_quarto=16;
+UPDATE hospedagens SET checkout="2023-08-20" WHERE num_quarto=17;
+UPDATE hospedagens SET checkin="2023-09-12", checkout="2024-12-24", id_cliente=10 WHERE num_quarto=18;
+UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
+UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
+
+-- DELETE clientes
+DELETE FROM clientes WHERE id_cliente=2;
+DELETE FROM clientes WHERE id_cliente=13;
+DELETE FROM clientes WHERE id_cliente=18;
+DELETE FROM clientes WHERE id_cliente=9;
+DELETE FROM clientes WHERE id_cliente=5;
+-- Não deleta por ser FK em outras tabelas
+
+-- DELETE hospedagens
+DELETE FROM hospedagens WHERE num_quarto=12;
+DELETE FROM hospedagens WHERE num_quarto=20;
+DELETE FROM hospedagens WHERE num_quarto=1;
+DELETE FROM hospedagens WHERE num_quarto=16;
+DELETE FROM hospedagens WHERE num_quarto=11;
 
 -- SELECTS
 USE SGT;
