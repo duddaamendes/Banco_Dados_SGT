@@ -279,3 +279,4 @@ USE SGT;
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
 SELECT * FROM hospedagens;
+SELECT * FROM funcionario;
