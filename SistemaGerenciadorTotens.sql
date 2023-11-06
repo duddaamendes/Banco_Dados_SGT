@@ -215,6 +215,27 @@ insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_n
 insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (19, 'Benny', 'Gabbitis', 21602762177, '10/7/2023', '625-405-1373', null, '59.10.52.101', 19);
 insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (20, 'Fidelity', 'Matisse', 52867785212, '12/7/2022', '691-694-0001', null, '49.89.116.71', 20);
 
+-- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (1, '24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (2, '15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (3, '07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (4, '25/08/2024', '5:12 AM', '7:34 PM', 'concerto supino');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (5, '18/06/2024', '12:56 PM', '4:29 PM', 'concerto ar condicionado');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (6, '13/07/2023', '9:24 PM', '11:42 AM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (7, '07/12/2024', '7:48 PM', '11:53 AM', 'concerto lampada');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (8, '01/07/2023', '1:43 PM', '9:10 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (9, '04/01/2023', '1:11 PM', '1:39 AM', 'concerto janela');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (10, '15/09/2024', '10:22 PM', '10:08 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (11, '27/04/2024', '5:19 PM', '10:16 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (12, '29/04/2024', '8:50 PM', '5:27 PM', 'concerto janela');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (13, '20/01/2024', '4:51 AM', '4:31 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (14, '22/05/2024', '5:52 PM', '2:57 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (15, '10/04/2024', '1:30 PM', '6:45 PM', 'concerto lampada');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (16, '26/03/2023', '1:55 AM', '3:28 PM', 'concerto janela');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (17, '06/09/2023', '9:55 PM', '2:01 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (18, '10/08/2024', '12:04 PM', '9:48 AM', 'concerto supino');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (19, '10/02/2024', '9:26 AM', '6:06 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (20, '18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
 
 -- UPDATE clientes
 UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
