@@ -240,6 +240,25 @@ UPDATE hospedagens SET checkin="2023-09-12", checkout="2024-12-24", id_cliente=1
 UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
 UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
 
+-- UPDATE FUNCIONARIOS --
+UPDATE funcionarios SET primeiro_nome = "Marcy", data_nascimento = "7/06/2009" WHERE id_funcionarios = 1;
+UPDATE funcionarios SET telefone = '3898-1512' WHERE id_funcionarios = 5;
+UPDATE funcionarios SET  cep = '45-133' WHERE id_funcionarios = 12;
+UPDATE funcionarios SET numero_casa = '210', data_nascimento = "15/08/1909" WHERE id_funcionarios = 9;
+UPDATE funcionarios SET primeiro_nome = "Mindy", sobrenome = "Brand" WHERE id_funcionarios = 4;
+UPDATE funcionarios SET id_funcionarios = 23, data_nascimento = "06/12/1956" WHERE id_funcionarios = 6;
+UPDATE funcionarios SET primeiro_nome = "Franki", numero_casa = '614' WHERE id_funcionarios = 15;
+UPDATE funcionarios SET cpf = '165-489-1256', sobrenome = "Kenneth" WHERE id_funcionarios = 2;
+UPDATE funcionarios SET data_nascimento= '14/05/1997', cpf = '126-495-8530' WHERE id_funcionarios = 20;
+UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "11/09/2001" WHERE id_funcionarios = 7;
+
+-- DELETE FUNCIONARIOS --
+DELETE FROM funcionarios WHERE id_funcionarios = 5;
+DELETE FROM funcionarios WHERE id_funcionarios = 16 ;
+DELETE FROM funcionarios WHERE id_funcionarios = 2;
+DELETE FROM funcionarios WHERE id_funcionarios = 9;
+DELETE FROM funcionarios WHERE id_funcionarios = 19;
+
 -- DELETE clientes
 DELETE FROM clientes WHERE id_cliente=2;
 DELETE FROM clientes WHERE id_cliente=13;
