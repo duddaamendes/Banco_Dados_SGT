@@ -47,15 +47,6 @@ CREATE TABLE IF NOT EXISTS `espacos_hotel` (
 
 
 -- -----------------------------------------------------
--- Table `gerenciamento_acesso`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `gerenciamento_acesso` (
-  `login_cliente_id_login_cliente` INT(7) NOT NULL,
-  `login_cliente_clientes_id_clientes` INT(7) NOT NULL,
-  PRIMARY KEY (`login_cliente_id_login_cliente`, `login_cliente_clientes_id_clientes`));
-
-
--- -----------------------------------------------------
 -- Table `funcionarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `funcionarios` (
@@ -100,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `hospedagens` (
 -- Table `manutencao_espaco`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `manutencao_espaco` (
-  `id_limpeza_espacos` INT NOT NULL AUTO_INCREMENT,
+  `id_manutencao_espaco` INT NOT NULL AUTO_INCREMENT,
   `dia` DATE NOT NULL,
   `hora_inicio` TIME NOT NULL,
   `hora_final` TIME NOT NULL,
@@ -122,6 +113,28 @@ DESC funcionarios;
 DESC reservas_espacos;
 DESC hospedagens;
 DESC manutencao_espaco;
+
+-- INSERTS USUARIO ---
+insert into usuarios (login, senha) values ( 'gbydaway0', 's5lRGZg');
+insert into usuarios (login, senha) values ('gmacpaike1', 'a3aAJ2p');
+insert into usuarios (login, senha) values ('lormond2', 'g1AWE6R');
+insert into usuarios (login, senha) values ('dschruyers3', 'g3SLNdt');
+insert into usuarios (login, senha) values ('fswansborough4', 'l3KFzgf');
+insert into usuarios (login, senha) values ('asimmank5', 'h8TuF4E');
+insert into usuarios (login, senha) values ('taviss6', 'c9EvM9a');
+insert into usuarios (login, senha) values ('sklossmann7', 'u9j3j52');
+insert into usuarios (login, senha) values ('jhutcheon8', 's9O2sj7');
+insert into usuarios (login, senha) values ('imonger9', 'k3b343w');
+insert into usuarios (login, senha) values ('cedmondsona', 'l0eMDE1');
+insert into usuarios (login, senha) values ('gcrickettb', 'k0RKzG0');
+insert into usuarios (login, senha) values ('thayhurstc', 'w3VeaHh');
+insert into usuarios (login, senha) values ('tnasebyd', 'k8ZqBd0');
+insert into usuarios (login, senha) values ('mbeazeye', 'u5Na6ul');
+insert into usuarios (login, senha) values ('mglaisnerf', 's90Ii9F');
+insert into usuarios (login, senha) values ('nlafflingg', 'f76jHyA');
+insert into usuarios (login, senha) values ('gconrathh', 'f70xt6l');
+insert into usuarios (login, senha) values ('mferdinandi', 'g9Ocf7K');
+insert into usuarios (login, senha) values ('uelementj', 'c8zZ05a');
 
 -- INSERTS CLIENTES ---
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('78080932445', 'Putnam', 'Nowland', '2013-08-01', 'pnowland0@tripadvisor.com', '(36) 72424-5142', 55652930, 15, 1);
@@ -171,71 +184,50 @@ insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (18, 
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (19, '2023-05-03', '2024-03-24', 19);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, '2023-11-09', '2023-12-05', 20);
 
--- INSERTS USUARIO ---
-insert into usuarios (login, senha) values ( 'gbydaway0', 's5lRGZg');
-insert into usuarios (login, senha) values ('gmacpaike1', 'a3aAJ2p');
-insert into usuarios (login, senha) values ('lormond2', 'g1AWE6R');
-insert into usuarios (login, senha) values ('dschruyers3', 'g3SLNdt');
-insert into usuarios (login, senha) values ('fswansborough4', 'l3KFzgf');
-insert into usuarios (login, senha) values ('asimmank5', 'h8TuF4E');
-insert into usuarios (login, senha) values ('taviss6', 'c9EvM9a');
-insert into usuarios (login, senha) values ('sklossmann7', 'u9j3j52');
-insert into usuarios (login, senha) values ('jhutcheon8', 's9O2sj7');
-insert into usuarios (login, senha) values ('imonger9', 'k3b343w');
-insert into usuarios (login, senha) values ('cedmondsona', 'l0eMDE1');
-insert into usuarios (login, senha) values ('gcrickettb', 'k0RKzG0');
-insert into usuarios (login, senha) values ('thayhurstc', 'w3VeaHh');
-insert into usuarios (login, senha) values ('tnasebyd', 'k8ZqBd0');
-insert into usuarios (login, senha) values ('mbeazeye', 'u5Na6ul');
-insert into usuarios (login, senha) values ('mglaisnerf', 's90Ii9F');
-insert into usuarios (login, senha) values ('nlafflingg', 'f76jHyA');
-insert into usuarios (login, senha) values ('gconrathh', 'f70xt6l');
-insert into usuarios (login, senha) values ('mferdinandi', 'g9Ocf7K');
-insert into usuarios (login, senha) values ('uelementj', 'c8zZ05a');
 
 -- INSERT FUNCIONARIOS --
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (1, 'Winni', 'Fust', 80279558948, '11/9/2022', '305-451-2246', null, '181.170.150.54', 1);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (2, 'Addy', 'Beeby', 51798654383, '6/12/2023', '567-467-8607', null, '30.195.196.17', 2);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (3, 'Nate', 'Dary', 36600142945, '7/17/2023', '309-134-0051', '34-143', '32.66.113.209', 3);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (4, 'Lorinda', 'Wyllie', 59820786099, '5/14/2023', '182-829-5072', null, '48.232.193.122', 4);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (5, 'Luciana', 'Berthomier', 6829376211, '7/17/2023', '215-700-9441', null, '44.124.65.105', 5);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (6, 'Martguerita', 'Klimkov', 98784461294, '11/9/2022', '929-116-7508', null, '207.133.233.158', 6);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (7, 'Clement', 'Tatershall', 22476559827, '2/17/2023', '431-692-3646', '38-213', '207.27.79.19', 7);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (8, 'Fern', 'Blaw', 11840432748, '2/4/2023', '402-852-3713', 'G6K', '55.219.198.52', 8);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (9, 'Thorstein', 'Railton', 34484601536, '4/3/2023', '298-516-7897', '700-0046', '13.194.160.103', 9);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (10, 'Kynthia', 'Fortman', 34788143156, '2/13/2023', '625-568-8487', '45930-000', '170.240.209.227', 10);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (11, 'Libbi', 'Gallahue', 62011924574, '8/31/2023', '601-312-7438', '66605 CEDEX', '252.98.123.181', 11);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (12, 'Lenette', 'Sallier', 16842105315, '6/1/2023', '687-155-1266', '242456', '227.224.81.179', 12);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casam, usuarios_id_ususarios) values (13, 'Charlton', 'Corrison', 18645205830, '6/7/2023', '445-984-4507', '64240-000', '115.130.169.164',13 );
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (14, 'Nickie', 'Manderson', 78290779822, '1/14/2023', '601-116-4991', null, '218.58.170.102', 14);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (15, 'Lesly', 'Whiterod', 14050244497, '2/26/2023', '303-292-2362', null, '49.172.242.56', 15);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (16, 'Augustine', 'Levison', 48452886351, '11/15/2022', '336-434-2140', '4810-571', '8.122.242.198', 16);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (17, 'Kally', 'Lintin', 54858538614, '5/26/2023', '662-382-9756', '216210', '162.51.37.244', 17);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (18, 'Gil', 'Daykin', 91615917098, '11/1/2022', '450-364-3148', null, '56.177.81.250', 18);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (19, 'Benny', 'Gabbitis', 21602762177, '10/7/2023', '625-405-1373', null, '59.10.52.101', 19);
-insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values (20, 'Fidelity', 'Matisse', 52867785212, '12/7/2022', '691-694-0001', null, '49.89.116.71', 20);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Winni', 'Fust', 80279558948, '11/9/2022', '305-451-2246', null, '181.170.150.54', 1);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Addy', 'Beeby', 51798654383, '6/12/2023', '567-467-8607', null, '30.195.196.17', 2);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ( 'Nate', 'Dary', 36600142945, '7/17/2023', '309-134-0051', '34-143', '32.66.113.209', 3);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Lorinda', 'Wyllie', 59820786099, '5/14/2023', '182-829-5072', null, '48.232.193.122', 4);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Luciana', 'Berthomier', 6829376211, '7/17/2023', '215-700-9441', null, '44.124.65.105', 5);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Martguerita', 'Klimkov', 98784461294, '11/9/2022', '929-116-7508', null, '207.133.233.158', 6);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Clement', 'Tatershall', 22476559827, '2/17/2023', '431-692-3646', '38-213', '207.27.79.19', 7);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Fern', 'Blaw', 11840432748, '2/4/2023', '402-852-3713', 'G6K', '55.219.198.52', 8);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Thorstein', 'Railton', 34484601536, '4/3/2023', '298-516-7897', '700-0046', '13.194.160.103', 9);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Kynthia', 'Fortman', 34788143156, '2/13/2023', '625-568-8487', '45930-000', '170.240.209.227', 10);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Libbi', 'Gallahue', 62011924574, '8/31/2023', '601-312-7438', '66605 CEDEX', '252.98.123.181', 11);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Lenette', 'Sallier', 16842105315, '6/1/2023', '687-155-1266', '242456', '227.224.81.179', 12);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casam, usuarios_id_ususarios) values ('Charlton', 'Corrison', 18645205830, '6/7/2023', '445-984-4507', '64240-000', '115.130.169.164',13 );
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Nickie', 'Manderson', 78290779822, '1/14/2023', '601-116-4991', null, '218.58.170.102', 14);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Lesly', 'Whiterod', 14050244497, '2/26/2023', '303-292-2362', null, '49.172.242.56', 15);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Augustine', 'Levison', 48452886351, '11/15/2022', '336-434-2140', '4810-571', '8.122.242.198', 16);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Kally', 'Lintin', 54858538614, '5/26/2023', '662-382-9756', '216210', '162.51.37.244', 17);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Gil', 'Daykin', 91615917098, '11/1/2022', '450-364-3148', null, '56.177.81.250', 18);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Benny', 'Gabbitis', 21602762177, '10/7/2023', '625-405-1373', null, '59.10.52.101', 19);
+insert into funcionarios (id_funcionarios, primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Fidelity', 'Matisse', 52867785212, '12/7/2022', '691-694-0001', null, '49.89.116.71', 20);
 
 -- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (1, '24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (2, '15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (3, '07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (4, '25/08/2024', '5:12 AM', '7:34 PM', 'concerto supino');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (5, '18/06/2024', '12:56 PM', '4:29 PM', 'concerto ar condicionado');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (6, '13/07/2023', '9:24 PM', '11:42 AM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (7, '07/12/2024', '7:48 PM', '11:53 AM', 'concerto lampada');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (8, '01/07/2023', '1:43 PM', '9:10 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (9, '04/01/2023', '1:11 PM', '1:39 AM', 'concerto janela');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (10, '15/09/2024', '10:22 PM', '10:08 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (11, '27/04/2024', '5:19 PM', '10:16 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (12, '29/04/2024', '8:50 PM', '5:27 PM', 'concerto janela');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (13, '20/01/2024', '4:51 AM', '4:31 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (14, '22/05/2024', '5:52 PM', '2:57 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (15, '10/04/2024', '1:30 PM', '6:45 PM', 'concerto lampada');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (16, '26/03/2023', '1:55 AM', '3:28 PM', 'concerto janela');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (17, '06/09/2023', '9:55 PM', '2:01 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (18, '10/08/2024', '12:04 PM', '9:48 AM', 'concerto supino');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (19, '10/02/2024', '9:26 AM', '6:06 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (20, '18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('25/08/2024', '5:12 AM', '7:34 PM', 'concerto supino');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('18/06/2024', '12:56 PM', '4:29 PM', 'concerto ar condicionado');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('13/07/2023', '9:24 PM', '11:42 AM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('07/12/2024', '7:48 PM', '11:53 AM', 'concerto lampada');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('01/07/2023', '1:43 PM', '9:10 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('04/01/2023', '1:11 PM', '1:39 AM', 'concerto janela');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('15/09/2024', '10:22 PM', '10:08 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('27/04/2024', '5:19 PM', '10:16 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('29/04/2024', '8:50 PM', '5:27 PM', 'concerto janela');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('20/01/2024', '4:51 AM', '4:31 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('22/05/2024', '5:52 PM', '2:57 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('10/04/2024', '1:30 PM', '6:45 PM', 'concerto lampada');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('26/03/2023', '1:55 AM', '3:28 PM', 'concerto janela');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('06/09/2023', '9:55 PM', '2:01 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('10/08/2024', '12:04 PM', '9:48 AM', 'concerto supino');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('10/02/2024', '9:26 AM', '6:06 PM', 'concerto piso');
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values ('18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
 
 -- UPDATE clientes
 UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
