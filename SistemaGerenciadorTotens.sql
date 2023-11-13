@@ -159,7 +159,53 @@ insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimen
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('42491338234', 'Nichole', 'Stranio', '1999-02-08', 'nstranioj@oakley.com', '(32) 78174-5968', 65661346, 828, 20);
 
 
+-- INSERTS ESPACOS ---
+use SGT;
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Academia', '2023-01-03', '2023-07-23', '13:27', '2:09', 1);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Psicina', '2023-10-29', '2023-02-21', '0:33', '0:07', 2);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Sala de recreação', '2023-07-09', '2023-12-28', '19:09', '18:13', 3);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Sauna', '2023-09-06', '2023-08-02', '9:59', '9:34', 4);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'SPA', '2023-10-08', '2023-04-22', '13:58', '1:19', 5);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Sala de jogos', '2023-06-13', '2023-02-04', '15:25', '7:39', 6);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Quadra de tênis', '2023-11-28', '2023-12-03', '16:00', '22:56', 7);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Quadra de vôlei', '2023-01-20', '2023-09-05', '9:48', '17:59', 8);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Quadra de futebol', '2023-09-04', '2023-10-30', '16:30', '22:08', 9);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Sala de pintura', '2023-03-07', '2023-04-16', '11:56', '11:34', 10);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Salão de Dança', '2023-04-24', '2023-05-04', '9:42', '0:52', 11);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Salão de festa', '2023-07-20', '2023-03-24', '23:37', '9:44', 12);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Quiosque', '2023-02-06', '2023-06-10', '2:30', '10:50', 13);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Mirante', '2023-07-14', '2023-12-11', '5:48', '16:47', 14);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Restaurante', '2023-06-10', '2023-06-27', '9:03', '4:41', 15);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Bar', '2023-01-13', '2023-10-15', '4:48', '7:09', 16);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Jardim', '2023-09-09', '2023-01-28', '13:37', '5:33', 17);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Banho de Lama', '2023-08-31', '2023-09-19', '21:43', '11:04', 18);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Massagem', '2023-10-27', '2023-08-26', '14:15', '17:17', 19);
+insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Aromoterapia', '2023-07-25', '2023-07-24', '22:27', '9:05', 20);
+
+
+
 -- INSERTS RESERVAS_ESPACOS ---
+use SGT;
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (1, '2023-05-12', 1, 1);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (2, '2022-11-13', 2, 2);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (3, '2022-11-01', 3, 3);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (4, '2023-07-21', 4, 4);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (5, '2023-06-16', 5, 5);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (6, '2023-12-21', 6, 6);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (7, '2022-09-24', 7, 7);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (8, '2023-10-20', 8, 8);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (9, '2023-07-17', 9, 9);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (10, '2022-07-17', 10, 10);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (11, '2023-04-30', 11, 11);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (12, '2023-05-23', 12, 12);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (13, '2023-11-08', 13, 13);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (14, '2022-10-11', 14, 14);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (15, '2022-05-16', 15, 15);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (16, '2023-03-11', 16, 16);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (17, '2023-04-04', 17, 17);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (18, '2022-11-20', 18, 18);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (19, '2023-06-21', 19, 19);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (20, '2023-06-06', 20, 20);
 
 
 -- INSERTS HOSPEDAGENS -- 
