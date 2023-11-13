@@ -311,6 +311,18 @@ UPDATE funcionarios SET cpf = '165-489-1256', sobrenome = "Kenneth" WHERE id_fun
 UPDATE funcionarios SET data_nascimento= '14/05/1997', cpf = '126-495-8530' WHERE id_funcionarios = 20;
 UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "11/09/2001" WHERE id_funcionarios = 7;
 
+-- UPDATE USUARIOS --
+UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
+UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_clientes = 19;
+UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_clientes = 20;
+UPDATE usuarios set login = 'VIntePed', senha = 'Yamaj46' WHERE id_clientes = 6;
+UPDATE usuarios set login = 'oKelly', senha = 'KellyKey48' WHERE id_clientes = 9;
+UPDATE usuarios set login = 'Helfn', senha = 'Midagardd' WHERE id_clientes = 16;
+UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_clientes = 3;
+UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes = 11;
+UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
+UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;
+
 -- DELETE FUNCIONARIOS --
 DELETE FROM funcionarios WHERE id_funcionarios = 5;
 DELETE FROM funcionarios WHERE id_funcionarios = 16 ;
