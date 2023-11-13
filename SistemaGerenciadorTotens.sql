@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `manutencao_espaco` (
   `hora_final` TIME NOT NULL,
   `tipo_manutencao` CHAR(1) NOT NULL,
   `id_espacos` INT(11) NOT NULL,
-  PRIMARY KEY (`id_limpeza_espacos`, `id_espacos`),
+  PRIMARY KEY (`id_manutencao_espaco`, `id_espacos`),
   FOREIGN KEY (`id_espacos`) REFERENCES `espacos_hotel` (`id_espacos`));
     
     
