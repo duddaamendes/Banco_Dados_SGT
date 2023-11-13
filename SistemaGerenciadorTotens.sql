@@ -260,24 +260,24 @@ insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nasc
 use SGT;
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('07/09/2023', '10:03 PM', '5:47 AM', 'limpesa piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('25/08/2024', '5:12 AM', '7:34 PM', 'concerto supino');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18/06/2024', '12:56 PM', '4:29 PM', 'concerto ar condicionado');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18/06/2024', '12:56 PM', '4:29 PM', 'limpesa ar condicionado');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('13/07/2023', '9:24 PM', '11:42 AM', 'concerto piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('07/12/2024', '7:48 PM', '11:53 AM', 'concerto lampada');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('01/07/2023', '1:43 PM', '9:10 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('04/01/2023', '1:11 PM', '1:39 AM', 'concerto janela');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('04/01/2023', '1:11 PM', '1:39 AM', 'limpesa janela');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('15/09/2024', '10:22 PM', '10:08 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('27/04/2024', '5:19 PM', '10:16 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('27/04/2024', '5:19 PM', '10:16 PM', 'limpesa piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('29/04/2024', '8:50 PM', '5:27 PM', 'concerto janela');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('20/01/2024', '4:51 AM', '4:31 PM', 'concerto piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('22/05/2024', '5:52 PM', '2:57 PM', 'concerto piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10/04/2024', '1:30 PM', '6:45 PM', 'concerto lampada');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('26/03/2023', '1:55 AM', '3:28 PM', 'concerto janela');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('06/09/2023', '9:55 PM', '2:01 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10/08/2024', '12:04 PM', '9:48 AM', 'concerto supino');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10/08/2024', '12:04 PM', '9:48 AM', 'limpesa supino');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10/02/2024', '9:26 AM', '6:06 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18/11/2024', '5:14 PM', '4:09 PM', 'limpesa ar condicionado');
 
 SELECT usuarios.id_usuarios, funcionarios.usuarios_id_usuarios FROM usuarios INNER JOIN usuarios_id_usuarios ON usuarios.id_usuarios = funcionarios.usuarios_id_usuarios;
 
@@ -337,6 +337,11 @@ UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_clientes = 3;
 UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes = 11;
 UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
 UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;
+
+-- UPDATE MANUTENÇÃO ESPAÇO --
+UPDATE manutencao_espaco set dia = '13/01/2023', hora_inicio = '03:30 PM', hora_final = '04:00 PM', tipo_manutencao = 'limpesa banheiros' where id_clientes = 5;
+
+
 
 -- DELETE Espaços --
 use SGT;
