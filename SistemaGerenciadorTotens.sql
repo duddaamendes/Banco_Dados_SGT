@@ -209,6 +209,7 @@ insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) 
 
 
 -- INSERTS HOSPEDAGENS -- 
+use SGT;
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16', '2023-12-14', 1);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10', '2024-01-05', 2);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21', '2023-12-26', 3);
@@ -232,6 +233,7 @@ insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, 
 
 
 -- INSERT FUNCIONARIOS --
+use SGT;
 insert into funcionarios (primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Winni', 'Fust', 80279558948, '11/9/2022', '305-451-2246', null, '181.170.150.54', 1);
 insert into funcionarios (primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Addy', 'Beeby', 51798654383, '6/12/2023', '567-467-8607', null, '30.195.196.17', 2);
 insert into funcionarios (primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ( 'Nate', 'Dary', 36600142945, '7/17/2023', '309-134-0051', '34-143', '32.66.113.209', 3);
@@ -254,6 +256,7 @@ insert into funcionarios (primeiro_nome, sobrenome, cpf, data_nascimento, telefo
 insert into funcionarios (primeiro_nome, sobrenome, cpf, data_nascimento, telefone , cep, numero_casa, usuarios_id_ususarios) values ('Fidelity', 'Matisse', 52867785212, '12/7/2022', '691-694-0001', null, '49.89.116.71', 20);
 
 -- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
+use SGT;
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
@@ -276,6 +279,7 @@ insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) va
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
 
 -- UPDATE clientes
+use SGT;
 UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
 UPDATE clientes SET sobrenome="Mendes", telefone="(47)98810-8919" WHERE id_cliente=2;
 UPDATE clientes SET primeiro_nome="Maria", num_casa=23 WHERE id_cliente=3;
@@ -288,6 +292,7 @@ UPDATE clientes SET sobrenome="Silva", num_casa=78 WHERE id_cliente=9;
 UPDATE clientes SET num_identificacao="09156798787", data_nascimento="2003-08-20" WHERE id_cliente=10;
 
 -- UPDATE hospedagens
+use SGT;
 UPDATE hospedagens SET checkin="2023-08-20", checkout="2023-12-20", id_cliente=12 WHERE num_quarto=11;
 UPDATE hospedagens SET id_cliente=3 WHERE num_quarto=12;
 UPDATE hospedagens SET checkout="2023-11-02" WHERE num_quarto=13;
@@ -299,7 +304,13 @@ UPDATE hospedagens SET checkin="2023-09-12", checkout="2024-12-24", id_cliente=1
 UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
 UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
 
+--UPDATE ESPAÇOS--
+
+UPDATE ESPACOS SET horario_fechamento = '23:00' WHERE ID_ESPACO = 1 ;
+UPDATE ESPACOS SET horario_fechamento = '23:00' WHERE ID_ESPACO = 1 ;
+
 -- UPDATE FUNCIONARIOS --
+use SGT;
 UPDATE funcionarios SET primeiro_nome = "Marcy", data_nascimento = "7/06/2009" WHERE id_funcionarios = 1;
 UPDATE funcionarios SET telefone = '3898-1512' WHERE id_funcionarios = 5;
 UPDATE funcionarios SET  cep = '45-133' WHERE id_funcionarios = 12;
@@ -310,6 +321,7 @@ UPDATE funcionarios SET primeiro_nome = "Franki", numero_casa = '614' WHERE id_f
 UPDATE funcionarios SET cpf = '165-489-1256', sobrenome = "Kenneth" WHERE id_funcionarios = 2;
 UPDATE funcionarios SET data_nascimento= '14/05/1997', cpf = '126-495-8530' WHERE id_funcionarios = 20;
 UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "11/09/2001" WHERE id_funcionarios = 7;
+
 
 -- UPDATE USUARIOS --
 UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
@@ -323,7 +335,26 @@ UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes 
 UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
 UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;
 
+-- DELETE Espaços --
+use SGT;
+DELETE FROM ESPACOS WHERE ID_ESPAÇOS = 10;
+DELETE FROM ESPACOS WHERE ID_ESPAÇOS = 20;
+DELETE FROM ESPACOS WHERE ID_ESPAÇOS = 12;
+DELETE FROM ESPACOS WHERE ID_ESPAÇOS = 13;
+DELETE FROM ESPACOS WHERE ID_ESPAÇOS = 18;
+
+
+-- DELETE Reservas espaços --
+use SGT;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 1;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 5;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 12;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 19;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 15;
+
+
 -- DELETE FUNCIONARIOS --
+use SGT;
 DELETE FROM funcionarios WHERE id_funcionarios = 5;
 DELETE FROM funcionarios WHERE id_funcionarios = 16 ;
 DELETE FROM funcionarios WHERE id_funcionarios = 2;
@@ -331,6 +362,7 @@ DELETE FROM funcionarios WHERE id_funcionarios = 9;
 DELETE FROM funcionarios WHERE id_funcionarios = 19;
 
 -- DELETE clientes
+use SGT;
 DELETE FROM clientes WHERE id_cliente=2;
 DELETE FROM clientes WHERE id_cliente=13;
 DELETE FROM clientes WHERE id_cliente=18;
@@ -339,6 +371,7 @@ DELETE FROM clientes WHERE id_cliente=5;
 -- Não deleta por ser FK em outras tabelas
 
 -- DELETE hospedagens
+use SGT;
 DELETE FROM hospedagens WHERE num_quarto=12;
 DELETE FROM hospedagens WHERE num_quarto=20;
 DELETE FROM hospedagens WHERE num_quarto=1;
@@ -356,6 +389,7 @@ SELECT * FROM hospedagens;
 SELECT * FROM manutencao_espaco;
 
 -- SELECT COUNT
+use SGT;
 SELECT COUNT(login) FROM usuarios;
 SELECT COUNT(email) FROM clientes;
 SELECT COUNT(nomes_espaco) FROM espacos_hotel;
