@@ -357,9 +357,23 @@ SELECT * FROM manutencao_espaco;
 
 -- SELECT COUNT
 SELECT COUNT(login) FROM usuarios;
-SELECT COUNT(login) FROM clientes;
-SELECT COUNT(login) FROM espacos_hotel;
-SELECT COUNT(login) FROM funcionarios;
-SELECT COUNT(login) FROM reservas_espacos;
-SELECT COUNT(login) FROM hospedagens;
-SELECT COUNT(login) FROM manutencao_espaco;
+SELECT COUNT(email) FROM clientes;
+SELECT COUNT(nomes_espaco) FROM espacos_hotel;
+SELECT COUNT(cep) FROM funcionarios;
+SELECT COUNT(dia_horario) FROM reservas_espacos;
+SELECT COUNT(num_quarto) FROM hospedagens;
+SELECT COUNT(dia) FROM manutencao_espaco;
+
+-- SELECT com JOIN (INNER, LEFT ou RIGHT) 
+USE SGT;
+SELECT clientes.id_cliente, hospedagens.num_quarto FROM clientes INNER JOIN hospedagens ON clientes.id_cliente = hospedagens.num_quarto;
+SELECT clientes.id_cliente, usuarios.id_usuarios FROM clientes INNER JOIN usuarios ON clientes.id_cliente = usuarios.id_usuarios;
+SELECT funcionarios.id_funcionario, usuarios.id_usuarios FROM clientes INNER JOIN funcionarios ON funcionarios.id_funcionario = usuarios.id_usuarios;
+
+-- INNER JOIN clienes -> inner join funcionarios
+
+SELECT tabela1.coluna1, tabela2.coluna1
+FROM tabela1
+LEFT JOIN tabela2
+ON 
+tabela1.coluna1 = tabela2.coluna1;
