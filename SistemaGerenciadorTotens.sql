@@ -258,26 +258,26 @@ insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nasc
 
 -- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
 use SGT;
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('24-08-2024', '12:53 PM', '8:51 AM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('15-02-2023', '4:30 AM', '7:18 AM', 'concerto lampada');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('07-09-2023', '10:03 PM', '5:47 AM', 'limpesa piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('25-08-2024', '5:12 AM', '7:34 PM', 'concerto supino');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18-06/2024', '12:56 PM', '4:29 PM', 'limpesa ar condicionado');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('13-07-2023', '9:24 PM', '11:42 AM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('07-12-2024', '7:48 PM', '11:53 AM', 'concerto lampada');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('01-07-2023', '1:43 PM', '9:10 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('04-01-2023', '1:11 PM', '1:39 AM', 'limpesa janela');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('15-09-2024', '10:22 PM', '10:08 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('27-04-2024', '5:19 PM', '10:16 PM', 'limpesa piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('29-04-2024', '8:50 PM', '5:27 PM', 'concerto janela');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('20-01-2024', '4:51 AM', '4:31 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('22-05-2024', '5:52 PM', '2:57 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10-04-2024', '1:30 PM', '6:45 PM', 'concerto lampada');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('26-03-2023', '1:55 AM', '3:28 PM', 'concerto janela');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('06-09-2023', '9:55 PM', '2:01 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10-08-2024', '12:04 PM', '9:48 AM', 'limpesa supino');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('10-02-2024', '9:26 AM', '6:06 PM', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('18-11-2024', '5:14 PM', '4:09 PM', 'limpesa ar condicionado');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-08-21', '12:53 PM', '8:51 AM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-02-12', '4:30 AM', '7:18 AM', 'concerto lampada');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-09-07', '10:03 PM', '5:47 AM', 'limpesa piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-08-25', '5:12 AM', '7:34 PM', 'concerto supino');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-06-18', '12:56 PM', '4:29 PM', 'limpesa ar condicionado');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-07-13', '9:24 PM', '11:42 AM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-12-07', '7:48 PM', '11:53 AM', 'concerto lampada');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-07-01', '1:43 PM', '9:10 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-01-04', '1:11 PM', '1:39 AM', 'limpesa janela');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-09-15', '10:22 PM', '10:08 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-04-27', '5:19 PM', '10:16 PM', 'limpesa piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-04-29', '8:50 PM', '5:27 PM', 'concerto janela');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-01-20', '4:51 AM', '4:31 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-05-22', '5:52 PM', '2:57 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-04-10', '1:30 PM', '6:45 PM', 'concerto lampada');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-03-26', '1:55 AM', '3:28 PM', 'concerto janela');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-06-09', '9:55 PM', '2:01 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-10-08', '12:04 PM', '9:48 AM', 'limpesa supino');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-10-02', '9:26 AM', '6:06 PM', 'concerto piso');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao) values ('2023-08-11', '5:14 PM', '4:09 PM', 'limpesa ar condicionado');
 
 SELECT usuarios.id_usuarios, funcionarios.usuarios_id_usuarios FROM usuarios INNER JOIN usuarios_id_usuarios ON usuarios.id_usuarios = funcionarios.usuarios_id_usuarios;
 
