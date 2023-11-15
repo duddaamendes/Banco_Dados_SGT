@@ -193,7 +193,7 @@ insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechame
 
 
 -- INSERTS RESERVAS_ESPACOS ---
-use SGT;
+
 insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (1, '2023-05-12', 1, 1);
 insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (2, '2022-11-13', 2, 2);
 insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (3, '2022-11-01', 3, 3);
@@ -217,7 +217,7 @@ insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) 
 
 
 -- INSERTS HOSPEDAGENS -- 
-use SGT;
+
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16', '2023-12-14', 1);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10', '2024-01-05', 2);
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21', '2023-12-26', 3);
@@ -241,7 +241,7 @@ insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, 
 
 
 -- INSERT FUNCIONARIOS --
-use SGT;
+
 -- INSERT FUNCIONARIOS --
 insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (80279558948,'Winni','Fust','2002-11-09' ,'(55) 30545-12246', '12345678','181', 1);
 insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (51798654383,'Addy','Beeby','2003-12-06','(20) 56746-78607', '23456789','30', 2);
@@ -290,7 +290,7 @@ insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id
 
 
 -- UPDATE clientes
-use SGT;
+
 UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
 UPDATE clientes SET sobrenome="Mendes", telefone="(47)98810-8919" WHERE id_cliente=2;
 UPDATE clientes SET primeiro_nome="Maria", num_casa=23 WHERE id_cliente=3;
@@ -303,7 +303,7 @@ UPDATE clientes SET sobrenome="Silva", num_casa=78 WHERE id_cliente=9;
 UPDATE clientes SET num_identificacao="09156798787", data_nascimento="2003-08-20" WHERE id_cliente=10;
 
 -- UPDATE hospedagens
-use SGT;
+
 UPDATE hospedagens SET checkin="2023-08-20", checkout="2023-12-20", id_cliente=12 WHERE num_quarto=11;
 UPDATE hospedagens SET id_cliente=3 WHERE num_quarto=12;
 UPDATE hospedagens SET checkout="2023-11-02" WHERE num_quarto=13;
@@ -316,7 +316,7 @@ UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
 UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
 
 -- UPDATE ESPAÇOS--
-use SGT; 
+
 UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 1 ;
 UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 5 ;
 UPDATE espaco_hotel SET horario_abertura ='A massagem não irá abrir hoje dia 13/11/2023' WHERE ID_ESPACOS = 19;
@@ -342,7 +342,7 @@ UPDATE reservas_espacos SET id_reservas = '7' WHERE id_cliente = 17;
 UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
 
 -- UPDATE FUNCIONARIOS --
-use SGT;
+
 UPDATE funcionarios SET primeiro_nome = "Marcy", data_nascimento = "2009-06-07" WHERE id_funcionario = 1;
 UPDATE funcionarios SET telefone = '3898-1512' WHERE id_funcionario = 5;
 UPDATE funcionarios SET cep = '45133' WHERE id_funcionario = 12;
@@ -356,6 +356,7 @@ UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "2001-09-11" 
 
 
 -- UPDATE USUARIOS --
+
 UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
 UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_clientes = 19;
 UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_clientes = 20;
@@ -368,7 +369,7 @@ UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
 UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;
 
 -- DELETE Espaços --
-use SGT;
+
 DELETE FROM espacos_hotel WHERE ID_ESPACOS = 10;
 DELETE FROM espacos_hotel WHERE ID_ESPACOS = 20;
 DELETE FROM espacos_hotel WHERE ID_ESPACOS = 12;
@@ -377,7 +378,7 @@ DELETE FROM espacos_hotel WHERE ID_ESPACOS = 18;
 
 
 -- DELETE Reservas espaços --
-use SGT;
+
 DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 1;
 DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 5;
 DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 12;
@@ -386,7 +387,7 @@ DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 15;
 
 
 -- DELETE FUNCIONARIOS --
-use SGT;
+
 DELETE FROM funcionarios WHERE id_funcionario = 5;
 DELETE FROM funcionarios WHERE id_funcionario = 16 ;
 DELETE FROM funcionarios WHERE id_funcionario = 2;
@@ -403,7 +404,7 @@ DELETE FROM hospedagens WHERE num_quarto=16;
 DELETE FROM hospedagens WHERE num_quarto=11;
 
 -- SELECTS
-USE SGT;
+
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
 SELECT * FROM espacos_hotel;
