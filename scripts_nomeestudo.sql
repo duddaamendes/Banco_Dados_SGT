@@ -328,6 +328,19 @@ UPDATE espaco_hotel SET capacidade ='60' WHERE ID_ESPACOS = 2;
 UPDATE espacos_hotel SET capacidade = '9' WHERE ID_ESPACOS = 11;
 UPDATE espacos_hotel SET horario_abertura ='15:00' WHERE ID_ESPACOS = 10;
 
+-- UPDATE RESERVAS ESPAÇOS--
+
+UPDATE reservas_espacos SET dia_horario = '2023-11/08' WHERE id_cliente = 15;
+UPDATE reservas_espacos SET id_espacos = '10' WHERE id_cliente = 12;
+UPDATE reservas_espacos SET id_espacos = '5' WHERE id_cliente = 20;
+UPDATE reservas_espacos SET id_espacos = '1' WHERE id_cliente = 13;
+UPDATE reservas_espacos SET id_espacos = '9' WHERE id_cliente = 9;
+UPDATE reservas_espacos SET id_espacos = '19' WHERE id_cliente = 8;
+UPDATE reservas_espacos SET id_cliente = '6' WHERE id_espacos = 12;
+UPDATE reservas_espacos SET id_reservas = '5' WHERE id_cliente = 5;
+UPDATE reservas_espacos SET id_reservas = '7' WHERE id_cliente = 17;
+UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
+
 -- UPDATE FUNCIONARIOS --
 use SGT;
 UPDATE funcionarios SET primeiro_nome = "Marcy", data_nascimento = "2009-06-07" WHERE id_funcionario = 1;
