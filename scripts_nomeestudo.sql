@@ -113,7 +113,6 @@ DESC funcionarios;
 DESC reservas_espacos;
 DESC hospedagens;
 DESC manutencao_espaco;
-
 -- INSERTS USUARIO ---
 insert into usuarios (login, senha) values ( 'gbydaway0', 's5lRGZg');
 insert into usuarios (login, senha) values ('gmacpaike1', 'a3aAJ2p');
