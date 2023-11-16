@@ -247,33 +247,33 @@ insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) 
 insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (19, '2023-06-21 05:00', 19, 19);
 insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (20, '2023-06-06 20:00', 20, 20);
 
-/*
+
 -- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
 
-Falta o id_espaço e alterar a formatação das datas. tirar do formato comentário e testar para ver se roda (código inteiro)!!
+-- Falta o id_espaço e alterar a formatação das datas. tirar do formato comentário e testar para ver se roda (código inteiro)!! --
 
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (1, '24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (2, '15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (3, '07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (4, '25/08/2024', '5:12 AM', '7:34 PM', 'concerto supino');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (5, '18/06/2024', '12:56 PM', '4:29 PM', 'concerto ar condicionado');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (6, '13/07/2023', '9:24 PM', '11:42 AM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (7, '07/12/2024', '7:48 PM', '11:53 AM', 'concerto lampada');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (8, '01/07/2023', '1:43 PM', '9:10 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (9, '04/01/2023', '1:11 PM', '1:39 AM', 'concerto janela');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (10, '15/09/2024', '10:22 PM', '10:08 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (11, '27/04/2024', '5:19 PM', '10:16 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (12, '29/04/2024', '8:50 PM', '5:27 PM', 'concerto janela');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (13, '20/01/2024', '4:51 AM', '4:31 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (14, '22/05/2024', '5:52 PM', '2:57 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (15, '10/04/2024', '1:30 PM', '6:45 PM', 'concerto lampada');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (16, '26/03/2023', '1:55 AM', '3:28 PM', 'concerto janela');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (17, '06/09/2023', '9:55 PM', '2:01 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (18, '10/08/2024', '12:04 PM', '9:48 AM', 'concerto supino');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (19, '10/02/2024', '9:26 AM', '6:06 PM', 'concerto piso');
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (20, '18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-10-02', '9:26', '16:06', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-08-11', '6:14', '14:09', 'concerto ar condicionado');*/
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (1, '24-08-2024', '06:00', '06:30', 'concerto piso', 1);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (2, '15-02-2023', '07:30', '08:00', 'concerto lampada', 2);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (3, '07-09-2023', '16:00', '16:30', 'concerto piso', 3);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (4, '25-08-024', '07:30', '08:00', 'concerto supino', 4);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (5, '18-06-2024', '06:00', '06:30', 'concerto ar condicionado', 5);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (6, '13-07-2023', '17:30', '18:00', 'concerto piso', 6);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (7, '07-12-2024', '06:00', '06:30', 'concerto lampada', 7);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (8, '01-07-2023', '07:30', '08:00', 'concerto piso', 8);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (9, '04-01-2023', '16:00', '16:30', 'concerto janela', 9);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (10, '15-09-2024', '07:30', '08:00', 'concerto piso', 10);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (11, '27-04-2024', '06:00', '06:30', 'concerto piso', 11);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (12, '29-04-2024', '17:30', '16:00', 'concerto janela', 12);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (13, '20-01-2024', '06:00', '06:30', 'concerto piso', 13);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (14, '22-05-2024', '07:30', '08:00', 'concerto piso', 14);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (15, '10-04-2024', '06:00', '06:30', 'concerto lampada', 15);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (16, '26-03-2023', '07:30', '08:00', 'concerto janela', 16);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (17, '06-09-2023', '16:00', '16:30', 'concerto piso', 17);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (18, '10-08-2024', '07:30', '08:00', 'concerto supino', 18);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (19, '10-02-2024', '06:00', '06:30', 'concerto piso', 19);
+insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (20, '18-11-2024', '07:30', '08:00', 'concerto ar condicionado', 20);
+-- insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos, id_espaco) values ('2024-10-02', '9:26', '16:06', 'concerto piso'); --
+-- insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos, id_espaco) values ('2024-08-11', '6:14', '14:09', 'concerto ar condicionado'); --
 
 -- SELECTS --
 SELECT * FROM usuarios;
@@ -300,21 +300,21 @@ SELECT funcionarios.primeiro_nome, usuarios.login FROM funcionarios INNER JOIN u
 SELECT manutencao_espaco.dia, espacos_hotel.nome_espaco FROM manutencao_espaco INNER JOIN espacos_hotel ON manutencao_espaco.id_manutencao_espaco = espacos_hotel.id_espacos;
 SELECT reservas_espacos.dia_horario, espacos_hotel.nome_espaco FROM reservas_espacos INNER JOIN espacos_hotel ON reservas_espacos.id_reservas = espacos_hotel.id_espacos;
 
-/*
+
 -- UPDATE USUARIOS --
 
-Foi deixado em comentário por que está com erro precisa alterar o id e depois tirar de cometário e rodar e ver se funciona!!
+-- Foi deixado em comentário por que está com erro precisa alterar o id e depois tirar de cometário e rodar e ver se funciona!!
 
-UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
-UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_clientes = 19;
-UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_clientes = 20;
-UPDATE usuarios set login = 'VIntePed', senha = 'Yamaj46' WHERE id_clientes = 6;
-UPDATE usuarios set login = 'oKelly', senha = 'KellyKey48' WHERE id_clientes = 9;
-UPDATE usuarios set login = 'Helfn', senha = 'Midagardd' WHERE id_clientes = 16;
-UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_clientes = 3;
-UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes = 11;
-UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
-UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;*/
+UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_usuarios = 1;
+UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_usuarios = 19;
+UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_usuarios = 20;
+UPDATE usuarios set login = 'VIntePed', senha = 'Yamaj46' WHERE id_usuarios = 6;
+UPDATE usuarios set login = 'oKelly', senha = 'KellyKey48' WHERE id_usuarios = 9;
+UPDATE usuarios set login = 'Helfn', senha = 'Midagardd' WHERE id_usuarios = 16;
+UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_usuarios = 3;
+UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_usuarios = 11;
+UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_usuarios = 10;
+UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_usuarios = 4;
 
 -- UPDATE clientes
 UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
@@ -365,7 +365,7 @@ UPDATE espacos_hotel SET capacidade = '9' WHERE ID_ESPACOS = 11;
 UPDATE espacos_hotel SET horario_abertura ='15:00' WHERE ID_ESPACOS = 10;
 
 -- UPDATE RESERVAS ESPAÇOS--
-UPDATE reservas_espacos SET dia_horario = '2023-11/08' WHERE id_cliente = 15;
+UPDATE reservas_espacos SET dia_horario = '2023-11-08' WHERE id_cliente = 15;
 UPDATE reservas_espacos SET id_espacos = '10' WHERE id_cliente = 12;
 UPDATE reservas_espacos SET id_espacos = '5' WHERE id_cliente = 20;
 UPDATE reservas_espacos SET id_espacos = '1' WHERE id_cliente = 13;
@@ -378,11 +378,25 @@ UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
 
 -- UPDATE MANUTENÇÃO --
 /*FAZER O UPDATE MANUTENÇÃO AQUI!!!!*/
-
+-- id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco --
+UPDATE manutencao_espaco SET dia = '2023-08-23' WHERE id_usuarios = 10;
+UPDATE manutencao_espaco SET hora_inicio = '12:00' WHERE id_usuarios = 9;
+UPDATE manutencao_espaco SET hora_final = '12:30' WHERE id_usuarios = 9;
+UPDATE manutencao_espaco SET tipo_manutencao = 'limpeza pesos' WHERE id_usuarios = 15;
+UPDATE manutencao_espaco SET id_espaco = '4' WHERE id_usuarios = 7;
+UPDATE manutencao_espaco SET dia = '2023-12-01' WHERE id_usuarios = 1;
+UPDATE manutencao_espaco SET hora_inicio = '18:30' WHERE id_usuarios = 13;
+UPDATE manutencao_espaco SET hora_final = '19:00' WHERE id_usuarios = 13;
+UPDATE manutencao_espaco SET tipo_manutencao = 'Conserto esteira' WHERE id_usuarios = 19;
+UPDATE manutencao_espaco SET id_espaco = '11' WHERE id_usuarios = 3;
 
 -- DELETE Usuários --
 /*FAZER O DELETE USUÁRIOS AQUI!!!!*/
-
+DELETE FROM usuarios where  id_usuarios = 6;
+DELETE FROM usuarios where  id_usuarios = 7;
+DELETE FROM usuarios where  id_usuarios = 8;
+DELETE FROM usuarios where  id_usuarios = 9;
+DELETE FROM usuarios where  id_usuarios = 10;
 
 /*Regra de negocio: Não poderá ser apagado registros de clientes
 
@@ -423,3 +437,8 @@ DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 15;
 
 -- DELETE Manutenção --
 /*FAZER O DELETE MANUTENÇÃO AQUI!!!!*/
+DELETE FROM manutencao_espaco WHERE id_limpeza_espacos = 12;
+DELETE FROM manutencao_espaco WHERE id_limpeza_espacos = 18;
+DELETE FROM manutencao_espaco WHERE id_limpeza_espacos = 16;
+DELETE FROM manutencao_espaco WHERE id_limpeza_espacos = 13;
+DELETE FROM manutencao_espaco WHERE id_limpeza_espacos = 14;
