@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `cep` INT(8) NOT NULL,
   `num_casa` INT(4) NOT NULL,
   `id_usuarios` INT(7) NOT NULL,
-  PRIMARY KEY ( `id_cliente`,`id_usuarios`),
+  PRIMARY KEY ( `id_cliente`,`id_usuarios`) ,
   FOREIGN KEY (`id_usuarios`) REFERENCES `usuarios` (`id_usuarios`)
   ON DELETE CASCADE
   ON UPDATE CASCADE);
@@ -69,15 +69,14 @@ CREATE TABLE IF NOT EXISTS `funcionarios` (
 -- Table `reservas_espacos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `reservas_espacos` (
-  `id_reservas` INT(7) NOT NULL AUTO_INCREMENT,
-  `dia_horario` DATETIME NOT NULL,
-  `id_cliente` INT(7) NOT NULL,
-  `id_espacos` INT(11) NOT NULL,
-  PRIMARY KEY (`id_reservas`, `id_cliente`, `id_espacos`),
-  FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`),
-  FOREIGN KEY (`id_espacos`) REFERENCES `espacos_hotel` (`id_espacos`)
-  ON DELETE CASCADE
-  ON UPDATE CASCADE);
+	  `id_reservas` INT(7) NOT NULL AUTO_INCREMENT,
+	  `dia_horario` DATETIME NOT NULL,
+	  `id_cliente` INT(7) NOT NULL,
+	  `id_espacos` INT(11) NOT NULL,
+	  PRIMARY KEY (`id_reservas`, `id_cliente`, `id_espacos`),
+	  FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`)  ON DELETE CASCADE ,
+	  FOREIGN KEY (`id_espacos`) REFERENCES `espacos_hotel` (`id_espacos`) ON DELETE CASCADE ON UPDATE CASCADE
+  );
 
 
 -- -----------------------------------------------------
@@ -264,7 +263,11 @@ insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nasc
 insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (21602762177,'Benny','Gabbitis','2003-07-10','(50) 62540-51373', '79146802','59', 19);
 insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (52867785212,'Fidelity','Matisse','2002-07-12','(52) 69169-40001', '02479135','498', 20);
 
+/*
 -- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
+
+Falta o id_espaço e alterar a formatação das datas. tirar do formato comentário e testar para ver se roda (código inteiro)!!
+
 insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (1, '24/08/2024', '12:53 PM', '8:51 AM', 'concerto piso');
 insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (2, '15/02/2023', '4:30 AM', '7:18 AM', 'concerto lampada');
 insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (3, '07/09/2023', '10:03 PM', '5:47 AM', 'concerto piso');
@@ -286,7 +289,7 @@ insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final,
 insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (19, '10/02/2024', '9:26 AM', '6:06 PM', 'concerto piso');
 insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao) values (20, '18/11/2024', '5:14 PM', '4:09 PM', 'concerto ar condicionado');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-10-02', '9:26', '16:06', 'concerto piso');
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-08-11', '6:14', '14:09', 'concerto ar condicionado');
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-08-11', '6:14', '14:09', 'concerto ar condicionado');*/
 
 
 -- UPDATE clientes
@@ -319,12 +322,12 @@ UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
 
 UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 1 ;
 UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 5 ;
-UPDATE espaco_hotel SET horario_abertura ='A massagem não irá abrir hoje dia 13/11/2023' WHERE ID_ESPACOS = 19;
-UPDATE espacos_hotel SET nome_espacos = ' A aromaterapia esta temporiariamente fechada' WHERE ID_ESPACOS = 20;
-UPDATE espaco_hotel SET horario_fechamento ='Não irá abrir hoje dia 13/11/2023' WHERE ID_ESPACOS = 5;
+UPDATE espacos_hotel SET horario_abertura ='13:00' WHERE ID_ESPACOS = 19;
+UPDATE espacos_hotel SET nome_espaco = 'A aromaterapia esta temporiariamente fechada' WHERE ID_ESPACOS = 20;
+UPDATE espacos_hotel SET horario_fechamento ='20:00' WHERE ID_ESPACOS = 5;
 UPDATE espacos_hotel SET capacidade = '3' WHERE ID_ESPACOS = 19 ;
 UPDATE espacos_hotel SET capacidade = '3' WHERE ID_ESPACOS = 18 ;
-UPDATE espaco_hotel SET capacidade ='60' WHERE ID_ESPACOS = 2;
+UPDATE espacos_hotel SET capacidade ='60' WHERE ID_ESPACOS = 2;
 UPDATE espacos_hotel SET capacidade = '9' WHERE ID_ESPACOS = 11;
 UPDATE espacos_hotel SET horario_abertura ='15:00' WHERE ID_ESPACOS = 10;
 
@@ -354,8 +357,10 @@ UPDATE funcionarios SET num_identificacao = '165-489-1256', sobrenome = "Kenneth
 UPDATE funcionarios SET data_nascimento= '1997-05-14', num_identificacao = '126-495-8530' WHERE id_funcionario = 20;
 UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "2001-09-11" WHERE id_funcionario = 7;
 
-
+/*
 -- UPDATE USUARIOS --
+
+Foi deixado em comentário por que está com erro precisa alterar o id e depois tirar de cometário e rodar e ver se funciona!!
 
 UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
 UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_clientes = 19;
@@ -366,7 +371,7 @@ UPDATE usuarios set login = 'Helfn', senha = 'Midagardd' WHERE id_clientes = 16;
 UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_clientes = 3;
 UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes = 11;
 UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
-UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;
+UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;*/
 
 -- DELETE Espaços --
 
@@ -394,16 +399,24 @@ DELETE FROM funcionarios WHERE id_funcionario = 2;
 DELETE FROM funcionarios WHERE id_funcionario = 9;
 DELETE FROM funcionarios WHERE id_funcionario = 19;
 
--- DELETE clientes
+/*Regra de negocio: Não poderá ser apagado registros de clientes
 
--- DELETE hospedagens
+-- DELETE clientes --
+DELETE FROM clientes WHERE id_cliente = 1;
+DELETE FROM clientes WHERE id_cliente = 2;
+DELETE FROM clientes WHERE id_cliente = 3;
+DELETE FROM clientes WHERE id_cliente = 4;
+DELETE FROM clientes WHERE id_cliente = 5;*/
+
+
+-- DELETE hospedagens --
 DELETE FROM hospedagens WHERE num_quarto=12;
 DELETE FROM hospedagens WHERE num_quarto=20;
 DELETE FROM hospedagens WHERE num_quarto=1;
 DELETE FROM hospedagens WHERE num_quarto=16;
 DELETE FROM hospedagens WHERE num_quarto=11;
 
--- SELECTS
+-- SELECTS --
 
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
@@ -413,7 +426,7 @@ SELECT * FROM reservas_espacos;
 SELECT * FROM hospedagens;
 SELECT * FROM manutencao_espaco;
 
--- SELECT COUNT
+-- SELECT COUNT --
 SELECT COUNT(login) FROM usuarios;
 SELECT COUNT(email) FROM clientes;
 SELECT COUNT(nome_espaco) FROM espacos_hotel;
@@ -422,7 +435,7 @@ SELECT COUNT(dia_horario) FROM reservas_espacos;
 SELECT COUNT(num_quarto) FROM hospedagens;
 SELECT COUNT(dia) FROM manutencao_espaco;
 
--- SELECT com JOIN (INNER, LEFT ou RIGHT) 
+-- SELECT com JOIN (INNER, LEFT ou RIGHT) --
 SELECT clientes.primeiro_nome, hospedagens.num_quarto FROM clientes INNER JOIN hospedagens ON clientes.id_cliente = hospedagens.num_quarto;
 SELECT clientes.primeiro_nome, usuarios.login FROM clientes INNER JOIN usuarios ON clientes.id_cliente = usuarios.id_usuarios;
 SELECT funcionarios.primeiro_nome, usuarios.login FROM funcionarios INNER JOIN usuarios ON funcionarios.id_funcionario = usuarios.id_usuarios;
