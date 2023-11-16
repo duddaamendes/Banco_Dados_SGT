@@ -252,28 +252,26 @@ insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) 
 
 -- Falta o id_espaço e alterar a formatação das datas. tirar do formato comentário e testar para ver se roda (código inteiro)!! --
 
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (1, '24-08-2024', '06:00', '06:30', 'concerto piso', 1);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (2, '15-02-2023', '07:30', '08:00', 'concerto lampada', 2);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (3, '07-09-2023', '16:00', '16:30', 'concerto piso', 3);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (4, '25-08-024', '07:30', '08:00', 'concerto supino', 4);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (5, '18-06-2024', '06:00', '06:30', 'concerto ar condicionado', 5);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (6, '13-07-2023', '17:30', '18:00', 'concerto piso', 6);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (7, '07-12-2024', '06:00', '06:30', 'concerto lampada', 7);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (8, '01-07-2023', '07:30', '08:00', 'concerto piso', 8);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (9, '04-01-2023', '16:00', '16:30', 'concerto janela', 9);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (10, '15-09-2024', '07:30', '08:00', 'concerto piso', 10);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (11, '27-04-2024', '06:00', '06:30', 'concerto piso', 11);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (12, '29-04-2024', '17:30', '16:00', 'concerto janela', 12);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (13, '20-01-2024', '06:00', '06:30', 'concerto piso', 13);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (14, '22-05-2024', '07:30', '08:00', 'concerto piso', 14);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (15, '10-04-2024', '06:00', '06:30', 'concerto lampada', 15);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (16, '26-03-2023', '07:30', '08:00', 'concerto janela', 16);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (17, '06-09-2023', '16:00', '16:30', 'concerto piso', 17);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (18, '10-08-2024', '07:30', '08:00', 'concerto supino', 18);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (19, '10-02-2024', '06:00', '06:30', 'concerto piso', 19);
-insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values (20, '18-11-2024', '07:30', '08:00', 'concerto ar condicionado', 20);
--- insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos, id_espaco) values ('2024-10-02', '9:26', '16:06', 'concerto piso'); --
--- insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos, id_espaco) values ('2024-08-11', '6:14', '14:09', 'concerto ar condicionado'); --
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('24-08-2024', '06:00', '06:30', 'concerto piso', 1);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('15-02-2023', '07:30', '08:00', 'concerto lampada', 2);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('07-09-2023', '16:00', '16:30', 'concerto piso', 3);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('25-08-024', '07:30', '08:00', 'concerto supino', 4);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('18-06-2024', '06:00', '06:30', 'concerto ar condicionado', 5);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('13-07-2023', '17:30', '18:00', 'concerto piso', 6);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('07-12-2024', '06:00', '06:30', 'concerto lampada', 7);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('01-07-2023', '07:30', '08:00', 'concerto piso', 8);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('04-01-2023', '16:00', '16:30', 'concerto janela', 9);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('15-09-2024', '07:30', '08:00', 'concerto piso', 10);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('27-04-2024', '06:00', '06:30', 'concerto piso', 11);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('29-04-2024', '17:30', '16:00', 'concerto janela', 12);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('20-01-2024', '06:00', '06:30', 'concerto piso', 13);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('22-05-2024', '07:30', '08:00', 'concerto piso', 14);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('10-04-2024', '06:00', '06:30', 'concerto lampada', 15);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('26-03-2023', '07:30', '08:00', 'concerto janela', 16);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('06-09-2023', '16:00', '16:30', 'concerto piso', 17);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('10-08-2024', '07:30', '08:00', 'concerto supino', 18);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('10-02-2024', '06:00', '06:30', 'concerto piso', 19);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espaco) values ('18-11-2024', '07:30', '08:00', 'concerto ar condicionado', 20);
 
 -- SELECTS --
 SELECT * FROM usuarios;
