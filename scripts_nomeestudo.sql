@@ -31,23 +31,8 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   FOREIGN KEY (`id_usuarios`) REFERENCES `usuarios` (`id_usuarios`)
   ON DELETE CASCADE
   ON UPDATE CASCADE);
-
-
--- -----------------------------------------------------
--- Table `espacos_hotel`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `espacos_hotel` (
-  `id_espacos` INT(7) NOT NULL AUTO_INCREMENT,
-  `nome_espaco` VARCHAR(100) NOT NULL,
-  `dia_semana_abertura` DATE NOT NULL,
-  `dia_semana_fechamento` DATE NOT NULL,
-  `horario_abertura` TIME NOT NULL,
-  `horario_fechamento` TIME NOT NULL,
-  `capacidade` INT(3) NOT NULL,
-  PRIMARY KEY (`id_espacos`));
-
-
--- -----------------------------------------------------
+  
+  -- -----------------------------------------------------
 -- Table `funcionarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `funcionarios` (
@@ -64,6 +49,33 @@ CREATE TABLE IF NOT EXISTS `funcionarios` (
   FOREIGN KEY (`id_usuarios`) REFERENCES `usuarios` (`id_usuarios`)
   ON DELETE CASCADE
   ON UPDATE CASCADE);
+  
+  -- -----------------------------------------------------
+-- Table `hospedagens`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `hospedagens` (
+  `num_quarto` INT(7) NOT NULL,
+  `checkin` DATETIME NOT NULL,
+  `checkout` DATETIME NOT NULL,
+  `id_cliente` INT(7) NOT NULL,
+  PRIMARY KEY (`num_quarto`, `id_cliente`),
+  FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE);
+
+-- -----------------------------------------------------
+-- Table `espacos_hotel`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `espacos_hotel` (
+  `id_espacos` INT(7) NOT NULL AUTO_INCREMENT,
+  `nome_espaco` VARCHAR(100) NOT NULL,
+  `dia_semana_abertura` DATE NOT NULL,
+  `dia_semana_fechamento` DATE NOT NULL,
+  `horario_abertura` TIME NOT NULL,
+  `horario_fechamento` TIME NOT NULL,
+  `capacidade` INT(3) NOT NULL,
+  PRIMARY KEY (`id_espacos`));
+
 
 -- -----------------------------------------------------
 -- Table `reservas_espacos`
@@ -77,21 +89,6 @@ CREATE TABLE IF NOT EXISTS `reservas_espacos` (
 	  FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`)  ON DELETE CASCADE ,
 	  FOREIGN KEY (`id_espacos`) REFERENCES `espacos_hotel` (`id_espacos`) ON DELETE CASCADE ON UPDATE CASCADE
   );
-
-
--- -----------------------------------------------------
--- Table `hospedagens`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hospedagens` (
-  `num_quarto` INT(7) NOT NULL,
-  `checkin` DATETIME NOT NULL,
-  `checkout` DATETIME NOT NULL,
-  `id_cliente` INT(7) NOT NULL,
-  PRIMARY KEY (`num_quarto`, `id_cliente`),
-  FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`)
-  ON DELETE CASCADE
-  ON UPDATE CASCADE);
-
 
 -- -----------------------------------------------------
 -- Table `manutencao_espaco`
@@ -107,11 +104,6 @@ CREATE TABLE IF NOT EXISTS `manutencao_espaco` (
   FOREIGN KEY (`id_espacos`) REFERENCES `espacos_hotel` (`id_espacos`)
   ON DELETE CASCADE
   ON UPDATE CASCADE);
-    
-    
-    /*/Inserts tabela reserva de espacos/*/
-    /*/20 (vinte) inserts por tabela/*/
-    /*/ids foram criados automaticos mas vão ser trocados para o numero dos quartos /*/
 
 -- Descs
 DESC usuarios;
@@ -166,6 +158,49 @@ insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimen
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('12035834987', 'Domeniga', 'Nappin', '2020-12-10', 'dnappini@wisc.edu', '(38) 84794-5310', 64257832, 948, 19);
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('42491338234', 'Nichole', 'Stranio', '1999-02-08', 'nstranioj@oakley.com', '(32) 78174-5968', 65661346, 828, 20);
 
+-- INSERT FUNCIONARIOS --
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (80279558948,'Winni','Fust','2002-11-09' ,'(55) 30545-12246', '12345678','181', 1);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (51798654383,'Addy','Beeby','2003-12-06','(20) 56746-78607', '23456789','30', 2);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (36600142945,'Nate','Dary','2003-07-17' ,'(41) 30913-40051', '34567890','32', 3);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (59820786099,'Lorinda','Wyllie','2003-05-14','(98) 18282-95072', '45678901','48', 4);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (6829376211, 'Luciana','Berthomier','2003-07-17' ,'(36) 21570-09441', '56789012','44', 5);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (98784461294,'Martguerita','Klimkov','2002-11-09','(50) 92911-67508', '67890123','207', 6);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (22476559827,'Clement','Tatershall', '2003-02-17' ,'(72) 43169-23646', '78901234','27', 7);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (11840432748,'Fern','Blaw','2003-02-04','(48) 40285-23713', '89012345','282',  8);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34484601536,'Thorstein','Railton','2003-03-04','(35) 29851-67897', '90123456','13', 9);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34788143156,'Kynthia','Fortman',    '2003-02-13','(67) 62556-88487', '01234567','170', 10);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (62011924574,'Libbi','Gallahue','2003-08-31','(87) 60131-27438', '13579246','252', 11);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (16842105315,'Lenette','Sallier','2003-01-06','(91) 68715-51266', '24681357','227', 12);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (18645205830,'Charlton','Corrison','2003-07-06','(32) 44598-44507', '35792468','115',13 );
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (78290779822,'Nickie', 'Manderson','2003-01-14' ,'(47) 60111-64991', '46813579','218', 14);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (14050244497,'Lesly','Whiterod','2003-02-26','(50) 30329-22362', '57924680','49', 15);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (48452886351,'Augustine','Levison','2002-11-15','(74) 33643-42140', '68035791', '812', 16);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (54858538614,'Kally','Lintin','2003-05-26','(22) 66238-29756', '80257913','162', 17);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (91615917098,'Gil','Daykin','2002-11-01','(36) 45036-43148', '91368024','56', 18);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (21602762177,'Benny','Gabbitis','2003-07-10','(50) 62540-51373', '79146802','59', 19);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (52867785212,'Fidelity','Matisse','2002-07-12','(52) 69169-40001', '02479135','498', 20);
+
+-- INSERTS HOSPEDAGENS -- 
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16', '2023-12-14', 1);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10', '2024-01-05', 2);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21', '2023-12-26', 3);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (4, '2023-06-04', '2023-12-22', 4);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (5, '2023-11-02', '2023-11-14', 5);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (6, '2023-10-06', '2024-02-21', 6);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (7, '2023-09-10', '2023-11-22', 7);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (8, '2023-08-26', '2024-02-21', 8);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (9, '2023-10-20', '2024-01-24', 9);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (10, '2023-04-20', '2023-11-10', 10);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (11, '2023-11-23', '2024-03-17', 11);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (12, '2023-10-30', '2023-12-12', 12);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (13, '2023-12-18', '2024-03-24', 13);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (14, '2023-09-30', '2024-02-17', 14);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (15, '2023-12-21', '2024-01-21', 15);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (16, '2023-12-12', '2024-01-31', 16);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (17, '2023-04-04', '2023-12-30', 17);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (18, '2023-05-28', '2023-12-17', 18);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (19, '2023-05-03', '2024-03-24', 19);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, '2023-11-09', '2023-12-05', 20);
 
 -- INSERTS ESPACOS ---
 insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Academia', '2023-01-03', '2023-07-23', '13:27', '2:09', 50);
@@ -190,78 +225,27 @@ insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechame
 insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Aromoterapia', '2023-07-25', '2023-07-24', '22:27', '9:05', 4);
 
 
-
 -- INSERTS RESERVAS_ESPACOS ---
-
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (1, '2023-05-12', 1, 1);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (2, '2022-11-13', 2, 2);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (3, '2022-11-01', 3, 3);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (4, '2023-07-21', 4, 4);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (5, '2023-06-16', 5, 5);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (6, '2023-12-21', 6, 6);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (7, '2022-09-24', 7, 7);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (8, '2023-10-20', 8, 8);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (9, '2023-07-17', 9, 9);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (10, '2022-07-17', 10, 10);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (11, '2023-04-30', 11, 11);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (12, '2023-05-23', 12, 12);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (13, '2023-11-08', 13, 13);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (14, '2022-10-11', 14, 14);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (15, '2022-05-16', 15, 15);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (16, '2023-03-11', 16, 16);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (17, '2023-04-04', 17, 17);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (18, '2022-11-20', 18, 18);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (19, '2023-06-21', 19, 19);
-insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (20, '2023-06-06', 20, 20);
-
-
--- INSERTS HOSPEDAGENS -- 
-
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16', '2023-12-14', 1);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10', '2024-01-05', 2);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21', '2023-12-26', 3);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (4, '2023-06-04', '2023-12-22', 4);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (5, '2023-11-02', '2023-11-14', 5);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (6, '2023-10-06', '2024-02-21', 6);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (7, '2023-09-10', '2023-11-22', 7);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (8, '2023-08-26', '2024-02-21', 8);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (9, '2023-10-20', '2024-01-24', 9);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (10, '2023-04-20', '2023-11-10', 10);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (11, '2023-11-23', '2024-03-17', 11);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (12, '2023-10-30', '2023-12-12', 12);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (13, '2023-12-18', '2024-03-24', 13);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (14, '2023-09-30', '2024-02-17', 14);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (15, '2023-12-21', '2024-01-21', 15);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (16, '2023-12-12', '2024-01-31', 16);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (17, '2023-04-04', '2023-12-30', 17);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (18, '2023-05-28', '2023-12-17', 18);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (19, '2023-05-03', '2024-03-24', 19);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, '2023-11-09', '2023-12-05', 20);
-
-
--- INSERT FUNCIONARIOS --
-
--- INSERT FUNCIONARIOS --
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (80279558948,'Winni','Fust','2002-11-09' ,'(55) 30545-12246', '12345678','181', 1);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (51798654383,'Addy','Beeby','2003-12-06','(20) 56746-78607', '23456789','30', 2);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (36600142945,'Nate','Dary','2003-07-17' ,'(41) 30913-40051', '34567890','32', 3);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (59820786099,'Lorinda','Wyllie','2003-05-14','(98) 18282-95072', '45678901','48', 4);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (6829376211, 'Luciana','Berthomier','2003-07-17' ,'(36) 21570-09441', '56789012','44', 5);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (98784461294,'Martguerita','Klimkov','2002-11-09','(50) 92911-67508', '67890123','207', 6);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (22476559827,'Clement','Tatershall', '2003-02-17' ,'(72) 43169-23646', '78901234','27', 7);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (11840432748,'Fern','Blaw','2003-02-04','(48) 40285-23713', '89012345','282',  8);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34484601536,'Thorstein','Railton','2003-03-04','(35) 29851-67897', '90123456','13', 9);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34788143156,'Kynthia','Fortman',    '2003-02-13','(67) 62556-88487', '01234567','170', 10);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (62011924574,'Libbi','Gallahue','2003-08-31','(87) 60131-27438', '13579246','252', 11);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (16842105315,'Lenette','Sallier','2003-01-06','(91) 68715-51266', '24681357','227', 12);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (18645205830,'Charlton','Corrison','2003-07-06','(32) 44598-44507', '35792468','115',13 );
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (78290779822,'Nickie', 'Manderson','2003-01-14' ,'(47) 60111-64991', '46813579','218', 14);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (14050244497,'Lesly','Whiterod','2003-02-26','(50) 30329-22362', '57924680','49', 15);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (48452886351,'Augustine','Levison','2002-11-15','(74) 33643-42140', '68035791', '812', 16);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (54858538614,'Kally','Lintin','2003-05-26','(22) 66238-29756', '80257913','162', 17);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (91615917098,'Gil','Daykin','2002-11-01','(36) 45036-43148', '91368024','56', 18);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (21602762177,'Benny','Gabbitis','2003-07-10','(50) 62540-51373', '79146802','59', 19);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (52867785212,'Fidelity','Matisse','2002-07-12','(52) 69169-40001', '02479135','498', 20);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (1, '2023-05-12 13:15', 1, 1);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (2, '2022-11-13 20:00', 2, 2);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (3, '2022-11-01 22:00', 3, 3);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (4, '2023-07-21 14:00', 4, 4);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (5, '2023-06-16 15:00', 5, 5);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (6, '2023-12-21 17:00', 6, 6);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (7, '2022-09-24 21:00', 7, 7);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (8, '2023-10-20 00:00', 8, 8);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (9, '2023-07-17 15:00', 9, 9);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (10, '2022-07-17 18:00', 10, 10);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (11, '2023-04-30 19:00', 11, 11);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (12, '2023-05-23 04:00', 12, 12);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (13, '2023-11-08 16:00', 13, 13);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (14, '2022-10-11 06:00', 14, 14);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (15, '2022-05-16 09:00', 15, 15);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (16, '2023-03-11 11:00', 16, 16);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (17, '2023-04-04 12:00', 17, 17);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (18, '2022-11-20 10:00', 18, 18);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (19, '2023-06-21 05:00', 19, 19);
+insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) values (20, '2023-06-06 20:00', 20, 20);
 
 /*
 -- INSERT MANUTENCAO -- falta espacos_hotel_id_espacos
@@ -291,133 +275,7 @@ insert into manutencao_espaco (id_limpeza_espacos, dia, hora_inicio, hora_final,
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-10-02', '9:26', '16:06', 'concerto piso');
 insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2024-08-11', '6:14', '14:09', 'concerto ar condicionado');*/
 
-
--- UPDATE clientes
-
-UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
-UPDATE clientes SET sobrenome="Mendes", telefone="(47)98810-8919" WHERE id_cliente=2;
-UPDATE clientes SET primeiro_nome="Maria", num_casa=23 WHERE id_cliente=3;
-UPDATE clientes SET cep=09856743, num_casa=345 WHERE id_cliente=4;
-UPDATE clientes SET primeiro_nome="Duda", sobrenome = "Mendes" WHERE id_cliente=5;
-UPDATE clientes SET telefone="(78) 98831-7346", email="mariamendes@gmail.com" WHERE id_cliente=6;
-UPDATE clientes SET primeiro_nome="Eusira", data_nascimento="1997-01-27" WHERE id_cliente=7;
-UPDATE clientes SET num_identificacao="CS265436", primeiro_nome="Carlos" WHERE id_cliente=8;
-UPDATE clientes SET sobrenome="Silva", num_casa=78 WHERE id_cliente=9;
-UPDATE clientes SET num_identificacao="09156798787", data_nascimento="2003-08-20" WHERE id_cliente=10;
-
--- UPDATE hospedagens
-
-UPDATE hospedagens SET checkin="2023-08-20", checkout="2023-12-20", id_cliente=12 WHERE num_quarto=11;
-UPDATE hospedagens SET id_cliente=3 WHERE num_quarto=12;
-UPDATE hospedagens SET checkout="2023-11-02" WHERE num_quarto=13;
-UPDATE hospedagens SET checkin="2024-10-20" WHERE num_quarto=14;
-UPDATE hospedagens SET checkin="2022-11-22" WHERE num_quarto=15;
-UPDATE hospedagens SET id_cliente=17 WHERE num_quarto=16;
-UPDATE hospedagens SET checkout="2023-08-20" WHERE num_quarto=17;
-UPDATE hospedagens SET checkin="2023-09-12", checkout="2024-12-24", id_cliente=10 WHERE num_quarto=18;
-UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
-UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
-
--- UPDATE ESPAÇOS--
-
-UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 1 ;
-UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 5 ;
-UPDATE espacos_hotel SET horario_abertura ='13:00' WHERE ID_ESPACOS = 19;
-UPDATE espacos_hotel SET nome_espaco = 'A aromaterapia esta temporiariamente fechada' WHERE ID_ESPACOS = 20;
-UPDATE espacos_hotel SET horario_fechamento ='20:00' WHERE ID_ESPACOS = 5;
-UPDATE espacos_hotel SET capacidade = '3' WHERE ID_ESPACOS = 19 ;
-UPDATE espacos_hotel SET capacidade = '3' WHERE ID_ESPACOS = 18 ;
-UPDATE espacos_hotel SET capacidade ='60' WHERE ID_ESPACOS = 2;
-UPDATE espacos_hotel SET capacidade = '9' WHERE ID_ESPACOS = 11;
-UPDATE espacos_hotel SET horario_abertura ='15:00' WHERE ID_ESPACOS = 10;
-
--- UPDATE RESERVAS ESPAÇOS--
-
-UPDATE reservas_espacos SET dia_horario = '2023-11/08' WHERE id_cliente = 15;
-UPDATE reservas_espacos SET id_espacos = '10' WHERE id_cliente = 12;
-UPDATE reservas_espacos SET id_espacos = '5' WHERE id_cliente = 20;
-UPDATE reservas_espacos SET id_espacos = '1' WHERE id_cliente = 13;
-UPDATE reservas_espacos SET id_espacos = '9' WHERE id_cliente = 9;
-UPDATE reservas_espacos SET id_espacos = '19' WHERE id_cliente = 8;
-UPDATE reservas_espacos SET id_cliente = '6' WHERE id_espacos = 12;
-UPDATE reservas_espacos SET id_reservas = '5' WHERE id_cliente = 5;
-UPDATE reservas_espacos SET id_reservas = '7' WHERE id_cliente = 17;
-UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
-
--- UPDATE FUNCIONARIOS --
-
-UPDATE funcionarios SET primeiro_nome = "Marcy", data_nascimento = "2009-06-07" WHERE id_funcionario = 1;
-UPDATE funcionarios SET telefone = '3898-1512' WHERE id_funcionario = 5;
-UPDATE funcionarios SET cep = '45133' WHERE id_funcionario = 12;
-UPDATE funcionarios SET num_casa = '210', data_nascimento = "1909-08-15" WHERE id_funcionario = 9;
-UPDATE funcionarios SET primeiro_nome = "Mindy", sobrenome = "Brand" WHERE id_funcionario = 4;
-UPDATE funcionarios SET data_nascimento = "1956-12-06" WHERE id_funcionario = 6;
-UPDATE funcionarios SET primeiro_nome = "Franki", num_casa = '614' WHERE id_funcionario = 15;
-UPDATE funcionarios SET num_identificacao = '165-489-1256', sobrenome = "Kenneth" WHERE id_funcionario = 2;
-UPDATE funcionarios SET data_nascimento= '1997-05-14', num_identificacao = '126-495-8530' WHERE id_funcionario = 20;
-UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "2001-09-11" WHERE id_funcionario = 7;
-
-/*
--- UPDATE USUARIOS --
-
-Foi deixado em comentário por que está com erro precisa alterar o id e depois tirar de cometário e rodar e ver se funciona!!
-
-UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
-UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_clientes = 19;
-UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_clientes = 20;
-UPDATE usuarios set login = 'VIntePed', senha = 'Yamaj46' WHERE id_clientes = 6;
-UPDATE usuarios set login = 'oKelly', senha = 'KellyKey48' WHERE id_clientes = 9;
-UPDATE usuarios set login = 'Helfn', senha = 'Midagardd' WHERE id_clientes = 16;
-UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_clientes = 3;
-UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes = 11;
-UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
-UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;*/
-
--- DELETE Espaços --
-
-DELETE FROM espacos_hotel WHERE ID_ESPACOS = 10;
-DELETE FROM espacos_hotel WHERE ID_ESPACOS = 20;
-DELETE FROM espacos_hotel WHERE ID_ESPACOS = 12;
-DELETE FROM espacos_hotel WHERE ID_ESPACOS = 13;
-DELETE FROM espacos_hotel WHERE ID_ESPACOS = 18;
-
-
--- DELETE Reservas espaços --
-
-DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 1;
-DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 5;
-DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 12;
-DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 19;
-DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 15;
-
-
--- DELETE FUNCIONARIOS --
-
-DELETE FROM funcionarios WHERE id_funcionario = 5;
-DELETE FROM funcionarios WHERE id_funcionario = 16 ;
-DELETE FROM funcionarios WHERE id_funcionario = 2;
-DELETE FROM funcionarios WHERE id_funcionario = 9;
-DELETE FROM funcionarios WHERE id_funcionario = 19;
-
-/*Regra de negocio: Não poderá ser apagado registros de clientes
-
--- DELETE clientes --
-DELETE FROM clientes WHERE id_cliente = 1;
-DELETE FROM clientes WHERE id_cliente = 2;
-DELETE FROM clientes WHERE id_cliente = 3;
-DELETE FROM clientes WHERE id_cliente = 4;
-DELETE FROM clientes WHERE id_cliente = 5;*/
-
-
--- DELETE hospedagens --
-DELETE FROM hospedagens WHERE num_quarto=12;
-DELETE FROM hospedagens WHERE num_quarto=20;
-DELETE FROM hospedagens WHERE num_quarto=1;
-DELETE FROM hospedagens WHERE num_quarto=16;
-DELETE FROM hospedagens WHERE num_quarto=11;
-
 -- SELECTS --
-
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
 SELECT * FROM espacos_hotel;
@@ -441,3 +299,129 @@ SELECT clientes.primeiro_nome, usuarios.login FROM clientes INNER JOIN usuarios 
 SELECT funcionarios.primeiro_nome, usuarios.login FROM funcionarios INNER JOIN usuarios ON funcionarios.id_funcionario = usuarios.id_usuarios;
 SELECT manutencao_espaco.dia, espacos_hotel.nome_espaco FROM manutencao_espaco INNER JOIN espacos_hotel ON manutencao_espaco.id_manutencao_espaco = espacos_hotel.id_espacos;
 SELECT reservas_espacos.dia_horario, espacos_hotel.nome_espaco FROM reservas_espacos INNER JOIN espacos_hotel ON reservas_espacos.id_reservas = espacos_hotel.id_espacos;
+
+/*
+-- UPDATE USUARIOS --
+
+Foi deixado em comentário por que está com erro precisa alterar o id e depois tirar de cometário e rodar e ver se funciona!!
+
+UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_clientes = 1;
+UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_clientes = 19;
+UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_clientes = 20;
+UPDATE usuarios set login = 'VIntePed', senha = 'Yamaj46' WHERE id_clientes = 6;
+UPDATE usuarios set login = 'oKelly', senha = 'KellyKey48' WHERE id_clientes = 9;
+UPDATE usuarios set login = 'Helfn', senha = 'Midagardd' WHERE id_clientes = 16;
+UPDATE usuarios set login = 'UCara', senha = '1661351684' WHERE id_clientes = 3;
+UPDATE usuarios set login = 'Jorg3Leve4135', senha = 'L3v4fe' WHERE id_clientes = 11;
+UPDATE usuarios set login = 'KanD69', senha = 'KD791635' WHERE id_clientes = 10;
+UPDATE usuarios set login = 'Pedr0K', senha = 'Krod461' WHERE id_clientes = 4;*/
+
+-- UPDATE clientes
+UPDATE clientes SET primeiro_nome="Paula", data_nascimento="2003-08-20" WHERE id_cliente=1;
+UPDATE clientes SET sobrenome="Mendes", telefone="(47)98810-8919" WHERE id_cliente=2;
+UPDATE clientes SET primeiro_nome="Maria", num_casa=23 WHERE id_cliente=3;
+UPDATE clientes SET cep=09856743, num_casa=345 WHERE id_cliente=4;
+UPDATE clientes SET primeiro_nome="Duda", sobrenome = "Mendes" WHERE id_cliente=5;
+UPDATE clientes SET telefone="(78) 98831-7346", email="mariamendes@gmail.com" WHERE id_cliente=6;
+UPDATE clientes SET primeiro_nome="Eusira", data_nascimento="1997-01-27" WHERE id_cliente=7;
+UPDATE clientes SET num_identificacao="CS265436", primeiro_nome="Carlos" WHERE id_cliente=8;
+UPDATE clientes SET sobrenome="Silva", num_casa=78 WHERE id_cliente=9;
+UPDATE clientes SET num_identificacao="09156798787", data_nascimento="2003-08-20" WHERE id_cliente=10;
+
+-- UPDATE FUNCIONARIOS --
+UPDATE funcionarios SET primeiro_nome = "Marcy", data_nascimento = "2009-06-07" WHERE id_funcionario = 1;
+UPDATE funcionarios SET telefone = '3898-1512' WHERE id_funcionario = 5;
+UPDATE funcionarios SET cep = '45133' WHERE id_funcionario = 12;
+UPDATE funcionarios SET num_casa = '210', data_nascimento = "1909-08-15" WHERE id_funcionario = 9;
+UPDATE funcionarios SET primeiro_nome = "Mindy", sobrenome = "Brand" WHERE id_funcionario = 4;
+UPDATE funcionarios SET data_nascimento = "1956-12-06" WHERE id_funcionario = 6;
+UPDATE funcionarios SET primeiro_nome = "Franki", num_casa = '614' WHERE id_funcionario = 15;
+UPDATE funcionarios SET num_identificacao = '165-489-1256', sobrenome = "Kenneth" WHERE id_funcionario = 2;
+UPDATE funcionarios SET data_nascimento= '1997-05-14', num_identificacao = '126-495-8530' WHERE id_funcionario = 20;
+UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "2001-09-11" WHERE id_funcionario = 7;
+
+-- UPDATE hospedagens --
+UPDATE hospedagens SET checkin="2023-08-20", checkout="2023-12-20", id_cliente=12 WHERE num_quarto=11;
+UPDATE hospedagens SET id_cliente=3 WHERE num_quarto=12;
+UPDATE hospedagens SET checkout="2023-11-02" WHERE num_quarto=13;
+UPDATE hospedagens SET checkin="2024-10-20" WHERE num_quarto=14;
+UPDATE hospedagens SET checkin="2022-11-22" WHERE num_quarto=15;
+UPDATE hospedagens SET id_cliente=17 WHERE num_quarto=16;
+UPDATE hospedagens SET checkout="2023-08-20" WHERE num_quarto=17;
+UPDATE hospedagens SET checkin="2023-09-12", checkout="2024-12-24", id_cliente=10 WHERE num_quarto=18;
+UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
+UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
+
+-- UPDATE ESPAÇOS--
+UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 1 ;
+UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 5 ;
+UPDATE espacos_hotel SET horario_abertura ='13:00' WHERE ID_ESPACOS = 19;
+UPDATE espacos_hotel SET nome_espaco = 'A aromaterapia esta temporiariamente fechada' WHERE ID_ESPACOS = 20;
+UPDATE espacos_hotel SET horario_fechamento ='20:00' WHERE ID_ESPACOS = 5;
+UPDATE espacos_hotel SET capacidade = '3' WHERE ID_ESPACOS = 19 ;
+UPDATE espacos_hotel SET capacidade = '3' WHERE ID_ESPACOS = 18 ;
+UPDATE espacos_hotel SET capacidade ='60' WHERE ID_ESPACOS = 2;
+UPDATE espacos_hotel SET capacidade = '9' WHERE ID_ESPACOS = 11;
+UPDATE espacos_hotel SET horario_abertura ='15:00' WHERE ID_ESPACOS = 10;
+
+-- UPDATE RESERVAS ESPAÇOS--
+UPDATE reservas_espacos SET dia_horario = '2023-11/08' WHERE id_cliente = 15;
+UPDATE reservas_espacos SET id_espacos = '10' WHERE id_cliente = 12;
+UPDATE reservas_espacos SET id_espacos = '5' WHERE id_cliente = 20;
+UPDATE reservas_espacos SET id_espacos = '1' WHERE id_cliente = 13;
+UPDATE reservas_espacos SET id_espacos = '9' WHERE id_cliente = 9;
+UPDATE reservas_espacos SET id_espacos = '19' WHERE id_cliente = 8;
+UPDATE reservas_espacos SET id_cliente = '6' WHERE id_espacos = 12;
+UPDATE reservas_espacos SET id_reservas = '5' WHERE id_cliente = 5;
+UPDATE reservas_espacos SET id_reservas = '7' WHERE id_cliente = 17;
+UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
+
+-- UPDATE MANUTENÇÃO --
+/*FAZER O UPDATE MANUTENÇÃO AQUI!!!!*/
+
+
+-- DELETE Usuários --
+/*FAZER O DELETE USUÁRIOS AQUI!!!!*/
+
+
+/*Regra de negocio: Não poderá ser apagado registros de clientes
+
+-- DELETE clientes --
+DELETE FROM clientes WHERE id_cliente = 1;
+DELETE FROM clientes WHERE id_cliente = 2;
+DELETE FROM clientes WHERE id_cliente = 3;
+DELETE FROM clientes WHERE id_cliente = 4;
+DELETE FROM clientes WHERE id_cliente = 5;*/
+
+-- DELETE FUNCIONARIOS --
+DELETE FROM funcionarios WHERE id_funcionario = 5;
+DELETE FROM funcionarios WHERE id_funcionario = 16 ;
+DELETE FROM funcionarios WHERE id_funcionario = 2;
+DELETE FROM funcionarios WHERE id_funcionario = 9;
+DELETE FROM funcionarios WHERE id_funcionario = 19;
+
+-- DELETE hospedagens --
+DELETE FROM hospedagens WHERE num_quarto=12;
+DELETE FROM hospedagens WHERE num_quarto=20;
+DELETE FROM hospedagens WHERE num_quarto=1;
+DELETE FROM hospedagens WHERE num_quarto=16;
+DELETE FROM hospedagens WHERE num_quarto=11;
+
+-- DELETE Espaços --
+DELETE FROM espacos_hotel WHERE ID_ESPACOS = 10;
+DELETE FROM espacos_hotel WHERE ID_ESPACOS = 20;
+DELETE FROM espacos_hotel WHERE ID_ESPACOS = 12;
+DELETE FROM espacos_hotel WHERE ID_ESPACOS = 13;
+DELETE FROM espacos_hotel WHERE ID_ESPACOS = 18;
+
+-- DELETE Reservas espaços --
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 1;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 5;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 12;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 19;
+DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 15;
+
+-- DELETE Manutenção --
+/*FAZER O DELETE MANUTENÇÃO AQUI!!!!*/
+
+
