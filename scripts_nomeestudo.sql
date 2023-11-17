@@ -180,26 +180,26 @@ insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nasc
 insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (52867785212,'Fidelity','Matisse','2002-07-12','(52) 69169-40001', '02479135','498', 20);
 
 -- INSERTS HOSPEDAGENS -- 
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16', '2023-12-14', 1);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10', '2024-01-05', 2);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21', '2023-12-26', 3);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (4, '2023-06-04', '2023-12-22', 4);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (5, '2023-11-02', '2023-11-14', 5);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (6, '2023-10-06', '2024-02-21', 6);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (7, '2023-09-10', '2023-11-22', 7);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (8, '2023-08-26', '2024-02-21', 8);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (9, '2023-10-20', '2024-01-24', 9);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (10, '2023-04-20', '2023-11-10', 10);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (11, '2023-11-23', '2024-03-17', 11);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (12, '2023-10-30', '2023-12-12', 12);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (13, '2023-12-18', '2024-03-24', 13);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (14, '2023-09-30', '2024-02-17', 14);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (15, '2023-12-21', '2024-01-21', 15);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (16, '2023-12-12', '2024-01-31', 16);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (17, '2023-04-04', '2023-12-30', 17);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (18, '2023-05-28', '2023-12-17', 18);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (19, '2023-05-03', '2024-03-24', 19);
-insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, '2023-11-09', '2023-12-05', 20);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16 10:00', '2023-12-14 10:00', 1);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (2, '2023-05-10 11:00', '2024-01-05 11:00', 2);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (3, '2023-07-21 12:00', '2023-12-26 12:00', 3);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (4, '2023-06-04 13:00', '2023-12-22 13:00', 4);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (5, '2023-11-02 14:00', '2023-11-14 14:00', 5);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (6, '2023-10-06 15:00', '2024-02-21 15:00', 6);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (7, '2023-09-10 16:00', '2023-11-22 16:00', 7);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (8, '2023-08-26 17:00', '2024-02-21 17:00', 8);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (9, '2023-10-20 18:00', '2024-01-24 18:00', 9);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (10, '2023-04-20 19:00', '2023-11-10 19:00', 10);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (11, '2023-11-23 20:00', '2024-03-17 20:00', 11);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (12, '2023-10-30 21:00', '2023-12-12 21:00', 12);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (13, '2023-12-18 22:00', '2024-03-24 22:00', 13);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (14, '2023-09-30 23:00', '2024-02-17 23:00', 14);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (15, '2023-12-21 09:00', '2024-01-21 09:00', 15);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (16, '2023-12-12 08:00', '2024-01-31 08:00', 16);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (17, '2023-04-04 07:00', '2023-12-30 07:00', 17);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (18, '2023-05-28 10:00', '2023-12-17 10:00', 18);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (19, '2023-05-03 12:00', '2024-03-24 12:00', 19);
+insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (20, '2023-11-09 11:00', '2023-12-05 11:00', 20);
 
 -- INSERTS ESPACOS ---
 insert into espacos_hotel ( nome_espaco, dia_semana_abertura, dia_semana_fechamento, horario_abertura, horario_fechamento, capacidade) values ( 'Academia', '2023-01-03', '2023-07-23', '13:27', '2:09', 50);
@@ -335,16 +335,16 @@ UPDATE funcionarios SET data_nascimento= '1997-05-14', num_identificacao = '126-
 UPDATE funcionarios SET primeiro_nome = "Jimin", data_nascimento = "2001-09-11" WHERE id_funcionario = 7;
 
 -- UPDATE hospedagens --
-UPDATE hospedagens SET checkin="2023-08-20", checkout="2023-12-20", id_cliente=12 WHERE num_quarto=11;
+UPDATE hospedagens SET checkin="2023-08-20 09:00", checkout="2023-12-20 13:00", id_cliente=12 WHERE num_quarto=11;
 UPDATE hospedagens SET id_cliente=3 WHERE num_quarto=12;
-UPDATE hospedagens SET checkout="2023-11-02" WHERE num_quarto=13;
-UPDATE hospedagens SET checkin="2024-10-20" WHERE num_quarto=14;
-UPDATE hospedagens SET checkin="2022-11-22" WHERE num_quarto=15;
+UPDATE hospedagens SET checkout="2023-11-02 09:00" WHERE num_quarto=13;
+UPDATE hospedagens SET checkin="2024-10-20 15:00" WHERE num_quarto=14;
+UPDATE hospedagens SET checkin="2022-11-22 07:00" WHERE num_quarto=15;
 UPDATE hospedagens SET id_cliente=17 WHERE num_quarto=16;
-UPDATE hospedagens SET checkout="2023-08-20" WHERE num_quarto=17;
-UPDATE hospedagens SET checkin="2023-09-12", checkout="2024-12-24", id_cliente=10 WHERE num_quarto=18;
+UPDATE hospedagens SET checkout="2023-08-20 09:00" WHERE num_quarto=17;
+UPDATE hospedagens SET checkin="2023-09-12 22:00", checkout="2024-12-24 19:00", id_cliente=10 WHERE num_quarto=18;
 UPDATE hospedagens SET id_cliente=16 WHERE num_quarto=19;
-UPDATE hospedagens SET checkin="2024-02-21" WHERE num_quarto=20;
+UPDATE hospedagens SET checkin="2024-02-21 13:00" WHERE num_quarto=20;
 
 -- UPDATE ESPAÇOS--
 UPDATE espacos_hotel SET horario_fechamento = '23:00' WHERE ID_ESPACOS = 1 ;
@@ -359,23 +359,23 @@ UPDATE espacos_hotel SET capacidade = '9' WHERE ID_ESPACOS = 11;
 UPDATE espacos_hotel SET horario_abertura ='15:00' WHERE ID_ESPACOS = 10;
 
 -- UPDATE RESERVAS ESPAÇOS--
-UPDATE reservas_espacos SET dia_horario = '2023-11-08' WHERE id_cliente = 15;
-UPDATE reservas_espacos SET id_espacos = '10' WHERE id_cliente = 12;
-UPDATE reservas_espacos SET id_espacos = '5' WHERE id_cliente = 20;
-UPDATE reservas_espacos SET id_espacos = '1' WHERE id_cliente = 13;
-UPDATE reservas_espacos SET id_espacos = '9' WHERE id_cliente = 9;
-UPDATE reservas_espacos SET id_espacos = '19' WHERE id_cliente = 8;
-UPDATE reservas_espacos SET id_cliente = '6' WHERE id_espacos = 12;
-UPDATE reservas_espacos SET id_reservas = '5' WHERE id_cliente = 5;
-UPDATE reservas_espacos SET id_reservas = '7' WHERE id_cliente = 17;
-UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
+UPDATE reservas_espacos SET dia_horario = '2023-11-08' WHERE id_reservas = 15;
+UPDATE reservas_espacos SET id_espacos = '10' WHERE id_reservas = 12;
+UPDATE reservas_espacos SET id_espacos = '5' WHERE id_reservas = 20;
+UPDATE reservas_espacos SET id_espacos = '1' WHERE id_reservas = 13;
+UPDATE reservas_espacos SET id_espacos = '9' WHERE id_reservas = 9;
+UPDATE reservas_espacos SET id_espacos = '19' WHERE id_reservas = 8;
+UPDATE reservas_espacos SET id_cliente = '6' WHERE id_reservas = 12;
+UPDATE reservas_espacos SET id_reservas = '5' WHERE id_reservas = 5;
+UPDATE reservas_espacos SET id_reservas = '7' WHERE id_reservas = 17;
+UPDATE reservas_espacos SET id_reservas = '11' WHERE id_reservas = 16;
 
 -- UPDATE MANUTENÇÃO --
 UPDATE manutencao_espaco SET dia = '2023-08-23' WHERE id_manutencao_espaco = 10;
 UPDATE manutencao_espaco SET hora_inicio = '12:00' WHERE id_manutencao_espaco = 9;
 UPDATE manutencao_espaco SET hora_final = '12:30' WHERE id_manutencao_espaco = 9;
 UPDATE manutencao_espaco SET tipo_manutencao = 'limpeza pesos' WHERE id_manutencao_espaco = 15;
-UPDATE manutencao_espaco SET id_espaco = '4' WHERE id_manutencao_espaco = 7;
+UPDATE manutencao_espaco SET id_espacos = '4' WHERE id_manutencao_espaco = 7;
 UPDATE manutencao_espaco SET dia = '2023-12-01' WHERE id_manutencao_espaco = 1;
 UPDATE manutencao_espaco SET hora_inicio = '18:30' WHERE id_manutencao_espaco = 13;
 UPDATE manutencao_espaco SET hora_final = '19:00' WHERE id_manutencao_espaco = 13;
@@ -427,8 +427,8 @@ DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 19;
 DELETE FROM RESERVAS_ESPACOS WHERE ID_RESERVAS = 15;
 
 -- DELETE Manutenção --
-DELETE FROM manutencao_espaco WHERE id_manutencao_espacos = 12;
-DELETE FROM manutencao_espaco WHERE id_manutencao_espacos = 18;
-DELETE FROM manutencao_espaco WHERE id_manutencao_espacos = 16;
-DELETE FROM manutencao_espaco WHERE id_manutencao_espacos = 13;
-DELETE FROM manutencao_espaco WHERE id_manutencao_espacos = 14;
+DELETE FROM manutencao_espaco WHERE id_manutencao_espaco = 12;
+DELETE FROM manutencao_espaco WHERE id_manutencao_espaco = 18;
+DELETE FROM manutencao_espaco WHERE id_manutencao_espaco = 16;
+DELETE FROM manutencao_espaco WHERE id_manutencao_espaco = 13;
+DELETE FROM manutencao_espaco WHERE id_manutencao_espaco = 14;
