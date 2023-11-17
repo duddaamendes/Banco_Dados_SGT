@@ -248,26 +248,26 @@ insert into reservas_espacos (id_reservas, dia_horario, id_cliente, id_espacos) 
 
 
 -- INSERT MANUTENCAO --
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('24-08-2024', '06:00', '06:30', 'concerto piso', 1);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('15-02-2023', '07:30', '08:00', 'concerto lampada', 2);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('07-09-2023', '16:00', '16:30', 'concerto piso', 3);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('25-08-024', '07:30', '08:00', 'concerto supino', 4);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('18-06-2024', '06:00', '06:30', 'concerto ar condicionado', 5);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('13-07-2023', '17:30', '18:00', 'concerto piso', 6);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('07-12-2024', '06:00', '06:30', 'concerto lampada', 7);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('01-07-2023', '07:30', '08:00', 'concerto piso', 8);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('04-01-2023', '16:00', '16:30', 'concerto janela', 9);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('15-09-2024', '07:30', '08:00', 'concerto piso', 10);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('27-04-2024', '06:00', '06:30', 'concerto piso', 11);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('29-04-2024', '17:30', '16:00', 'concerto janela', 12);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('20-01-2024', '06:00', '06:30', 'concerto piso', 13);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('22-05-2024', '07:30', '08:00', 'concerto piso', 14);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('10-04-2024', '06:00', '06:30', 'concerto lampada', 15);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('26-03-2023', '07:30', '08:00', 'concerto janela', 16);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('06-09-2023', '16:00', '16:30', 'concerto piso', 17);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('10-08-2024', '07:30', '08:00', 'concerto supino', 18);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('10-02-2024', '06:00', '06:30', 'concerto piso', 19);
-insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('18-11-2024', '07:30', '08:00', 'concerto ar condicionado', 20);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-08-24', '06:00', '06:30', 'concerto piso', 1);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-02-15', '07:30', '08:00', 'concerto lampada', 2);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-07-09', '16:00', '16:30', 'concerto piso', 3);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-02-08', '07:30', '08:00', 'concerto supino', 4);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023=06=29', '06:00', '06:30', 'concerto ar condicionado', 5);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-07-13', '17:30', '18:00', 'concerto piso', 6);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-12-07', '06:00', '06:30', 'concerto lampada', 7);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-01-07', '07:30', '08:00', 'concerto piso', 8);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-04-01', '16:00', '16:30', 'concerto janela', 9);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-12-09', '07:30', '08:00', 'concerto piso', 10);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-07-04', '06:00', '06:30', 'concerto piso', 11);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-04-29', '17:30', '16:00', 'concerto janela', 12);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-01-20', '06:00', '06:30', 'concerto piso', 13);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-05-22', '07:30', '08:00', 'concerto piso', 14);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-10-04', '06:00', '06:30', 'concerto lampada', 15);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-03-26', '07:30', '08:00', 'concerto janela', 16);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-06-09', '16:00', '16:30', 'concerto piso', 17);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-10-08', '07:30', '08:00', 'concerto supino', 18);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-10-02', '06:00', '06:30', 'concerto piso', 19);
+insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id_espacos) values ('2023-11-18', '07:30', '08:00', 'concerto ar condicionado', 20);
 
 -- SELECTS --
 SELECT * FROM usuarios;
@@ -371,16 +371,16 @@ UPDATE reservas_espacos SET id_reservas = '7' WHERE id_cliente = 17;
 UPDATE reservas_espacos SET id_reservas = '11' WHERE id_cliente = 16;
 
 -- UPDATE MANUTENÇÃO --
-UPDATE manutencao_espaco SET dia = '2023-08-23' WHERE id_usuarios = 10;
-UPDATE manutencao_espaco SET hora_inicio = '12:00' WHERE id_usuarios = 9;
-UPDATE manutencao_espaco SET hora_final = '12:30' WHERE id_usuarios = 9;
-UPDATE manutencao_espaco SET tipo_manutencao = 'limpeza pesos' WHERE id_usuarios = 15;
-UPDATE manutencao_espaco SET id_espaco = '4' WHERE id_usuarios = 7;
-UPDATE manutencao_espaco SET dia = '2023-12-01' WHERE id_usuarios = 1;
-UPDATE manutencao_espaco SET hora_inicio = '18:30' WHERE id_usuarios = 13;
-UPDATE manutencao_espaco SET hora_final = '19:00' WHERE id_usuarios = 13;
-UPDATE manutencao_espaco SET tipo_manutencao = 'Conserto esteira' WHERE id_usuarios = 19;
-UPDATE manutencao_espaco SET id_espacos = '11' WHERE id_usuarios = 3;
+UPDATE manutencao_espaco SET dia = '2023-08-23' WHERE id_manutencao_espaco = 10;
+UPDATE manutencao_espaco SET hora_inicio = '12:00' WHERE id_manutencao_espaco = 9;
+UPDATE manutencao_espaco SET hora_final = '12:30' WHERE id_manutencao_espaco = 9;
+UPDATE manutencao_espaco SET tipo_manutencao = 'limpeza pesos' WHERE id_manutencao_espaco = 15;
+UPDATE manutencao_espaco SET id_espaco = '4' WHERE id_manutencao_espaco = 7;
+UPDATE manutencao_espaco SET dia = '2023-12-01' WHERE id_manutencao_espaco = 1;
+UPDATE manutencao_espaco SET hora_inicio = '18:30' WHERE id_manutencao_espaco = 13;
+UPDATE manutencao_espaco SET hora_final = '19:00' WHERE id_manutencao_espaco = 13;
+UPDATE manutencao_espaco SET tipo_manutencao = 'Conserto esteira' WHERE id_manutencao_espaco = 19;
+UPDATE manutencao_espaco SET id_espacos = '11' WHERE id_manutencao_espaco = 3;
 
 -- DELETE Usuários --
 DELETE FROM usuarios where  id_usuarios = 6;
