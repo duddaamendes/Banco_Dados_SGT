@@ -134,6 +134,26 @@ insert into usuarios (login, senha) values ('nlafflingg', 'f76jHyA');
 insert into usuarios (login, senha) values ('gconrathh', 'f70xt6l');
 insert into usuarios (login, senha) values ('mferdinandi', 'g9Ocf7K');
 insert into usuarios (login, senha) values ('uelementj', 'c8zZ05a');
+insert into usuarios (login, senha) values ('jfinlason0', 'aF1`k\/>D5<#7');
+insert into usuarios (login, senha) values ('dcopelli1', 'yQ8<jie7');
+insert into usuarios (login, senha) values ('hjecks2', 'xV0~TM~+,(WGc');
+insert into usuarios (login, senha) values ('rhazlewood3', 'iX0=BFug5IUo}');
+insert into usuarios (login, senha) values ('lcavie4', 'mV0*`<f/.M!hd');
+insert into usuarios (login, senha) values ('bdainton5', 'cW7#BNM{<');
+insert into usuarios (login, senha) values ('tdahlborg6', 'lJ3#55jV@N_#B');
+insert into usuarios (login, senha) values ('jboutellier7', 'nB9.B153');
+insert into usuarios (login, senha) values ('sreeson8', 'eR4(NY&w%(\.Ch\q');
+insert into usuarios (login, senha) values ('fscown9', 'nY7''>6U6#~6GOYss');
+insert into usuarios (login, senha) values ('jfinlason0', 'aF1`k\/>D5<#7');
+insert into usuarios (login, senha) values ('dcopelli1', 'yQ8<jie7');
+insert into usuarios (login, senha) values ('hjecks2', 'xV0~TM~+,(WGc');
+insert into usuarios (login, senha) values ('rhazlewood3', 'iX0=BFug5IUo}');
+insert into usuarios (login, senha) values ('lcavie4', 'mV0*`<f/.M!hd');
+insert into usuarios (login, senha) values ('bdainton5', 'cW7#BNM{<');
+insert into usuarios (login, senha) values ('tdahlborg6', 'lJ3#55jV@N_#B');
+insert into usuarios (login, senha) values ('jboutellier7', 'nB9.B153');
+insert into usuarios (login, senha) values ('sreeson8', 'eR4(NY&w%(\.Ch\q');
+insert into usuarios (login, senha) values ('fscown9', 'nY7''>6U6#~6GOYss');
 
 -- INSERTS CLIENTES ---
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('78080932445', 'Putnam', 'Nowland', '2013-08-01', 'pnowland0@tripadvisor.com', '(36) 72424-5142', 55652930, 15, 1);
@@ -158,26 +178,26 @@ insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimen
 insert into clientes (num_identificacao, primeiro_nome, sobrenome, data_nascimento, email, telefone, cep, num_casa, id_usuarios) values ('42491338234', 'Nichole', 'Stranio', '1999-02-08', 'nstranioj@oakley.com', '(32) 78174-5968', 65661346, 828, 20);
 
 -- INSERT FUNCIONARIOS --
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (80279558948,'Winni','Fust','2002-11-09' ,'(55) 30545-12246', '12345678','181', 1);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (51798654383,'Addy','Beeby','2003-12-06','(20) 56746-78607', '23456789','30', 2);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (36600142945,'Nate','Dary','2003-07-17' ,'(41) 30913-40051', '34567890','32', 3);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (59820786099,'Lorinda','Wyllie','2003-05-14','(98) 18282-95072', '45678901','48', 4);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (6829376211, 'Luciana','Berthomier','2003-07-17' ,'(36) 21570-09441', '56789012','44', 5);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (98784461294,'Martguerita','Klimkov','2002-11-09','(50) 92911-67508', '67890123','207', 6);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (22476559827,'Clement','Tatershall', '2003-02-17' ,'(72) 43169-23646', '78901234','27', 7);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (11840432748,'Fern','Blaw','2003-02-04','(48) 40285-23713', '89012345','282',  8);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34484601536,'Thorstein','Railton','2003-03-04','(35) 29851-67897', '90123456','13', 9);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34788143156,'Kynthia','Fortman',    '2003-02-13','(67) 62556-88487', '01234567','170', 10);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (62011924574,'Libbi','Gallahue','2003-08-31','(87) 60131-27438', '13579246','252', 11);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (16842105315,'Lenette','Sallier','2003-01-06','(91) 68715-51266', '24681357','227', 12);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (18645205830,'Charlton','Corrison','2003-07-06','(32) 44598-44507', '35792468','115',13 );
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (78290779822,'Nickie', 'Manderson','2003-01-14' ,'(47) 60111-64991', '46813579','218', 14);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (14050244497,'Lesly','Whiterod','2003-02-26','(50) 30329-22362', '57924680','49', 15);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (48452886351,'Augustine','Levison','2002-11-15','(74) 33643-42140', '68035791', '812', 16);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (54858538614,'Kally','Lintin','2003-05-26','(22) 66238-29756', '80257913','162', 17);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (91615917098,'Gil','Daykin','2002-11-01','(36) 45036-43148', '91368024','56', 18);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (21602762177,'Benny','Gabbitis','2003-07-10','(50) 62540-51373', '79146802','59', 19);
-insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (52867785212,'Fidelity','Matisse','2002-07-12','(52) 69169-40001', '02479135','498', 20);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (80279558948,'Winni','Fust','2002-11-09' ,'(55) 30545-12246', '12345678','181', 21);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (51798654383,'Addy','Beeby','2003-12-06','(20) 56746-78607', '23456789','30', 22);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (36600142945,'Nate','Dary','2003-07-17' ,'(41) 30913-40051', '34567890','32', 23);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (59820786099,'Lorinda','Wyllie','2003-05-14','(98) 18282-95072', '45678901','48', 24);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (6829376211, 'Luciana','Berthomier','2003-07-17' ,'(36) 21570-09441', '56789012','44', 25);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (98784461294,'Martguerita','Klimkov','2002-11-09','(50) 92911-67508', '67890123','207', 26);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (22476559827,'Clement','Tatershall', '2003-02-17' ,'(72) 43169-23646', '78901234','27', 27);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (11840432748,'Fern','Blaw','2003-02-04','(48) 40285-23713', '89012345','282',  28);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34484601536,'Thorstein','Railton','2003-03-04','(35) 29851-67897', '90123456','13', 29);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (34788143156,'Kynthia','Fortman',    '2003-02-13','(67) 62556-88487', '01234567','170', 30);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (62011924574,'Libbi','Gallahue','2003-08-31','(87) 60131-27438', '13579246','252', 31);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (16842105315,'Lenette','Sallier','2003-01-06','(91) 68715-51266', '24681357','227', 32);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (18645205830,'Charlton','Corrison','2003-07-06','(32) 44598-44507', '35792468','115', 33);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (78290779822,'Nickie', 'Manderson','2003-01-14' ,'(47) 60111-64991', '46813579','218', 34);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (14050244497,'Lesly','Whiterod','2003-02-26','(50) 30329-22362', '57924680','49', 35);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (48452886351,'Augustine','Levison','2002-11-15','(74) 33643-42140', '68035791', '812', 36);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (54858538614,'Kally','Lintin','2003-05-26','(22) 66238-29756', '80257913','162', 37);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (91615917098,'Gil','Daykin','2002-11-01','(36) 45036-43148', '91368024','56', 38);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (21602762177,'Benny','Gabbitis','2003-07-10','(50) 62540-51373', '79146802','59', 39);
+insert into funcionarios (num_identificacao, primeiro_nome, sobrenome, data_nascimento, telefone , cep, num_casa, id_usuarios) values (52867785212,'Fidelity','Matisse','2002-07-12','(52) 69169-40001', '02479135','498', 40);
 
 -- INSERTS HOSPEDAGENS -- 
 insert into hospedagens (num_quarto, checkin, checkout, id_cliente) values (1, '2023-11-16 10:00', '2023-12-14 10:00', 1);
@@ -272,10 +292,10 @@ insert into manutencao_espaco (dia, hora_inicio, hora_final, tipo_manutencao, id
 -- SELECTS --
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
-SELECT * FROM espacos_hotel;
 SELECT * FROM funcionarios;
-SELECT * FROM reservas_espacos;
 SELECT * FROM hospedagens;
+SELECT * FROM espacos_hotel;
+SELECT * FROM reservas_espacos;
 SELECT * FROM manutencao_espaco;
 
 -- SELECT COUNT --
@@ -296,9 +316,6 @@ SELECT reservas_espacos.dia_horario, espacos_hotel.nome_espaco FROM reservas_esp
 
 
 -- UPDATE USUARIOS --
-
--- Foi deixado em comentário por que está com erro precisa alterar o id e depois tirar de cometário e rodar e ver se funciona!!
-
 UPDATE usuarios set login = 'Ota-vi0', senha = 'Claiton4956' WHERE id_usuarios = 1;
 UPDATE usuarios set login = 'Ant.oni.o', senha = 'Dori57val' WHERE id_usuarios = 19;
 UPDATE usuarios set login = 'JonAs', senha = '48679123' WHERE id_usuarios = 20;
